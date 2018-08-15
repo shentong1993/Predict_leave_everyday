@@ -1,0 +1,1222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="057607dd-1246-4466-9d3e-4c4aec8468e5" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/Predict_leave.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/shen.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ReadMe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/activate" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/activate.csh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/activate.fish" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/easy_install" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/easy_install-3.7" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/pip" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/pip3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/pip3.7" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/pwiz.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/python" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/python3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/python3.7" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/database/TrainDataModel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/database/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/database/baseModel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/draw_data/draw1.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/draw_data/draw2.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/draw_data/draw3.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/draw_data/test_run_day_percent.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/every_day_run/get_data_and_predict.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/easy-install.pth" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/peewee-3.6.4-py3.7.egg-info/PKG-INFO" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/peewee-3.6.4-py3.7.egg-info/SOURCES.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/peewee-3.6.4-py3.7.egg-info/dependency_links.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/peewee-3.6.4-py3.7.egg-info/installed-files.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/peewee-3.6.4-py3.7.egg-info/not-zip-safe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/peewee-3.6.4-py3.7.egg-info/top_level.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/peewee.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/EGG-INFO/PKG-INFO" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/EGG-INFO/SOURCES.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/EGG-INFO/dependency_links.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/EGG-INFO/entry_points.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/EGG-INFO/not-zip-safe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/EGG-INFO/requires.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/EGG-INFO/top_level.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/__main__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/appdirs.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/cachecontrol/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/cachecontrol/_cmd.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/cachecontrol/adapter.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/cachecontrol/cache.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/cachecontrol/caches/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/cachecontrol/caches/file_cache.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/cachecontrol/caches/redis_cache.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/cachecontrol/compat.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/cachecontrol/controller.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/cachecontrol/filewrapper.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/cachecontrol/heuristics.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/cachecontrol/serialize.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/cachecontrol/wrapper.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/colorama/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/colorama/ansi.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/colorama/ansitowin32.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/colorama/initialise.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/colorama/win32.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/colorama/winterm.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/_backport/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/_backport/misc.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/_backport/shutil.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/_backport/sysconfig.cfg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/_backport/sysconfig.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/_backport/tarfile.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/compat.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/database.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/index.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/locators.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/manifest.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/markers.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/metadata.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/resources.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/scripts.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/t32.exe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/t64.exe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/util.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/version.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/w32.exe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/w64.exe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distlib/wheel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/distro.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/_ihatexml.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/_inputstream.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/_tokenizer.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/_trie/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/_trie/_base.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/_trie/datrie.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/_trie/py.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/_utils.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/constants.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/filters/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/filters/alphabeticalattributes.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/filters/base.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/filters/inject_meta_charset.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/filters/lint.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/filters/optionaltags.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/filters/sanitizer.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/filters/whitespace.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/html5parser.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/serializer.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treeadapters/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treeadapters/genshi.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treeadapters/sax.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treebuilders/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treebuilders/base.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treebuilders/dom.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treebuilders/etree.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treebuilders/etree_lxml.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treewalkers/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treewalkers/base.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treewalkers/dom.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treewalkers/etree.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treewalkers/etree_lxml.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/html5lib/treewalkers/genshi.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/ipaddress.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/lockfile/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/lockfile/linklockfile.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/lockfile/mkdirlockfile.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/lockfile/pidlockfile.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/lockfile/sqlitelockfile.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/lockfile/symlinklockfile.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/ordereddict.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/packaging/__about__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/packaging/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/packaging/_compat.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/packaging/_structures.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/packaging/markers.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/packaging/requirements.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/packaging/specifiers.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/packaging/utils.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/packaging/version.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/pkg_resources/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/progress/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/progress/bar.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/progress/counter.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/progress/helpers.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/progress/spinner.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/pyparsing.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/re-vendor.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/adapters.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/api.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/auth.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/cacert.pem" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/certs.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/compat.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/cookies.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/exceptions.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/hooks.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/models.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/big5freq.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/big5prober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/chardetect.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/chardistribution.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/charsetgroupprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/charsetprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/codingstatemachine.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/compat.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/constants.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/cp949prober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/escprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/escsm.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/eucjpprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/euckrfreq.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/euckrprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/euctwfreq.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/euctwprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/gb2312freq.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/gb2312prober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/hebrewprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/jisfreq.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/jpcntx.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/langbulgarianmodel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/langcyrillicmodel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/langgreekmodel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/langhebrewmodel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/langhungarianmodel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/langthaimodel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/latin1prober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/mbcharsetprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/mbcsgroupprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/mbcssm.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/sbcharsetprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/sbcsgroupprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/sjisprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/universaldetector.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/chardet/utf8prober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/_collections.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/connection.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/connectionpool.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/contrib/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/contrib/appengine.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/contrib/ntlmpool.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/contrib/pyopenssl.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/contrib/socks.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/exceptions.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/fields.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/filepost.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/packages/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/packages/ordered_dict.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/packages/six.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/packages/ssl_match_hostname/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/packages/ssl_match_hostname/_implementation.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/poolmanager.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/request.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/response.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/util/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/util/connection.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/util/request.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/util/response.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/util/retry.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/util/ssl_.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/util/timeout.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/packages/urllib3/util/url.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/sessions.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/status_codes.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/structures.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/requests/utils.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/retrying.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/six.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/webencodings/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/webencodings/labels.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/webencodings/mklabels.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/webencodings/tests.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/_vendor/webencodings/x_user_defined.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/basecommand.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/baseparser.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/cmdoptions.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/commands/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/commands/check.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/commands/completion.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/commands/download.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/commands/freeze.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/commands/hash.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/commands/help.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/commands/install.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/commands/list.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/commands/search.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/commands/show.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/commands/uninstall.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/commands/wheel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/compat/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/compat/dictconfig.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/download.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/exceptions.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/index.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/locations.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/models/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/models/index.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/operations/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/operations/check.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/operations/freeze.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/pep425tags.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/req/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/req/req_file.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/req/req_install.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/req/req_set.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/req/req_uninstall.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/status_codes.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/utils/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/utils/appdirs.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/utils/build.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/utils/deprecation.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/utils/encoding.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/utils/filesystem.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/utils/glibc.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/utils/hashes.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/utils/logging.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/utils/outdated.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/utils/packaging.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/utils/setuptools_build.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/utils/ui.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/vcs/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/vcs/bazaar.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/vcs/git.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/vcs/mercurial.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/vcs/subversion.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pip-9.0.1-py3.7.egg/pip/wheel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/_speedups.cpython-37m-darwin.so" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/_sqlite_ext.cpython-37m-darwin.so" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/_sqlite_udf.cpython-37m-darwin.so" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/apsw_ext.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/dataset.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/db_url.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/fields.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/flask_utils.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/hybrid.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/kv.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/migrate.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/mysql_ext.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/pool.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/postgres_ext.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/reflection.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/shortcuts.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/signals.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/sqlcipher_ext.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/sqlite_ext.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/sqlite_udf.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/sqliteq.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/playhouse/test_utils.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/pwiz.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/setuptools-28.8.0-py3.7.egg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/python3.7/site-packages/setuptools.pth" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real0_predic0_feature_cluster/get_data_and_cluster.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/get_data_and_cluster.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/logistic_predict/predict/balance_predict/make_real_predict_analysis.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/make_many_label1_analysis.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/read" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pip-selfcheck.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pre_deal_data/add_lastLabel1_csv.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pre_deal_data/add_null_weight.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pre_deal_data/make_one_label_csv.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pre_deal_data/make_train_data_with_lastLabel1.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pre_deal_data/wash_data.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pull.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pyvenv.cfg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/readme.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/requirements.txt" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Predict_leave$make_train_data_with_lastLabel1.coverage" NAME="make_train_data_with_lastLabel1 Coverage Results" MODIFIED="1533791782204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/train_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$try1.coverage" NAME="try1 Coverage Results" MODIFIED="1533901373478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/try" />
+    <SUITE FILE_PATH="coverage/Predict_leave$try4.coverage" NAME="try4 Coverage Results" MODIFIED="1534063671426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/try" />
+    <SUITE FILE_PATH="coverage/Predict_leave$draw1.coverage" NAME="draw1 Coverage Results" MODIFIED="1534303979196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$get_data_and_predict.coverage" NAME="get_data_and_predict Coverage Results" MODIFIED="1534323082284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/every_day_run" />
+    <SUITE FILE_PATH="coverage/Predict_leave$add_null_weight.coverage" NAME="add_null_weight Coverage Results" MODIFIED="1534132167246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pre_deal_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$make_one_label_csv.coverage" NAME="make_one_label_csv Coverage Results" MODIFIED="1533730768599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pre_deal_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$add_lastLabel1_csv.coverage" NAME="add_lastLabel1_csv Coverage Results" MODIFIED="1533791756176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pre_deal_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$try__1_.coverage" NAME="try (1) Coverage Results" MODIFIED="1533882363428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/final_add" />
+    <SUITE FILE_PATH="coverage/Predict_leave$watch_data.coverage" NAME="watch_data Coverage Results" MODIFIED="1534130302719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pre_deal_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$draw3.coverage" NAME="draw3 Coverage Results" MODIFIED="1534304684575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$try3.coverage" NAME="try3 Coverage Results" MODIFIED="1534063018119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/try" />
+    <SUITE FILE_PATH="coverage/Predict_leave$get_data_and_cluster__1_.coverage" NAME="get_data_and_cluster (1) Coverage Results" MODIFIED="1533886566007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real0_predic0_feature_cluster" />
+    <SUITE FILE_PATH="coverage/Predict_leave$get_data_and_cluster.coverage" NAME="get_data_and_cluster Coverage Results" MODIFIED="1533886530868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster" />
+    <SUITE FILE_PATH="coverage/Predict_leave$test_run_day_percent.coverage" NAME="test_run_day_percent Coverage Results" MODIFIED="1534314571528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$make_many_label1_analysis.coverage" NAME="make_many_label1_analysis Coverage Results" MODIFIED="1534299065192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict" />
+    <SUITE FILE_PATH="coverage/Predict_leave$make_real_predict_analysis.coverage" NAME="make_real_predict_analysis Coverage Results" MODIFIED="1534242475314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/predict/balance_predict" />
+    <SUITE FILE_PATH="coverage/Predict_leave$pull.coverage" NAME="pull Coverage Results" MODIFIED="1534322504667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Predict_leave$balance_predict.coverage" NAME="balance_predict Coverage Results" MODIFIED="1533805928259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/predict/balance_predict" />
+    <SUITE FILE_PATH="coverage/Predict_leave$try2.coverage" NAME="try2 Coverage Results" MODIFIED="1534319106502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$TrainDataModel.coverage" NAME="TrainDataModel Coverage Results" MODIFIED="1534322460466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database" />
+    <SUITE FILE_PATH="coverage/Predict_leave$last_day_predict.coverage" NAME="last_day_predict Coverage Results" MODIFIED="1533896883954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/predict/task_last_day_predict" />
+    <SUITE FILE_PATH="coverage/Predict_leave$draw2.coverage" NAME="draw2 Coverage Results" MODIFIED="1534304181693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$try.coverage" NAME="try Coverage Results" MODIFIED="1534321406190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ReadMe" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ReadMe">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="171">
+                <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_data_and_predict.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/every_day_run/get_data_and_predict.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="2442" column="4" lean-forward="false" selection-start-line="2442" selection-start-column="4" selection-end-line="2442" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#47613#49236#0" expanded="false" />
+                <element signature="e#49900#50478#0" expanded="false" />
+                <marker date="1534323292129" expanded="true" signature="567:956" ph="SELECT term.... TB_TERM" />
+                <marker date="1534323292129" expanded="true" signature="1743:6765" ph="select sub2.... term_num" />
+                <marker date="1534323292129" expanded="true" signature="4444:6721" ph="select sub.t... TERM_NUM" />
+                <marker date="1534323292129" expanded="true" signature="4716:6675" ph="select term.... tb_weight_record" />
+                <marker date="1534323292129" expanded="true" signature="5636:6292" ph="select body.... TB_BODY_DATA" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="make_many_label1_analysis.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/make_many_label1_analysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="358" column="48" lean-forward="false" selection-start-line="358" selection-start-column="33" selection-end-line="358" selection-end-column="48" />
+              <folding>
+                <element signature="e#140#961#0" expanded="false" />
+                <element signature="e#996#1562#0" expanded="false" />
+                <element signature="e#1618#3031#0" expanded="false" />
+                <element signature="e#3120#4359#0" expanded="false" />
+                <element signature="e#4435#4824#0" expanded="false" />
+                <element signature="e#5044#5512#0" expanded="false" />
+                <element signature="e#5581#9585#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/read">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4113">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="make_real_predict_analysis.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logistic_predict/predict/balance_predict/make_real_predict_analysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pull.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pull.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="draw3.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/draw_data/draw3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="574">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_run_day_percent.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/draw_data/test_run_day_percent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1499">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>print</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/logistic_predict/predict/balance_predict.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/predict/balance_predict/balance_predict.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/predict/balance_predict/try.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/final_add/t.csv.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/final_add/t.csv" />
+        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/final_add/try.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/get_data_and_cluster.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real0_predic0_feature_cluster/get_data_and_cluster.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/train_data/train_data_with_lastLabel/add_train_data_for_real1_predict0/1_day_add_data.csv" />
+        <option value="$PROJECT_DIR$/logistic_predict/predict/task_last_day_predict/last_day_predict.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/cluster_data/7day/keep_27_day/3.csv" />
+        <option value="$PROJECT_DIR$/logistic_predict/train_data/train_data_with_lastLabel/add_train_data_for_real1_predict0/7_day_add_data.csv" />
+        <option value="$PROJECT_DIR$/logistic_predict/train_data/train_data_with_lastLabel/add_train_data_for_real1_predict0/14_day_add_data.csv" />
+        <option value="$PROJECT_DIR$/logistic_predict/train_data/train_data_with_lastLabel/add_train_data_for_real1_predict0/21_day_add_data.csv" />
+        <option value="$PROJECT_DIR$/try/try2.py" />
+        <option value="$PROJECT_DIR$/try/try3.py" />
+        <option value="$PROJECT_DIR$/try/try1.py" />
+        <option value="$PROJECT_DIR$/try/try4.py" />
+        <option value="$PROJECT_DIR$/another_read" />
+        <option value="$PROJECT_DIR$/pre_deal_data/watch_data.py" />
+        <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/pre_deal_data/wash_data.py" />
+        <option value="$PROJECT_DIR$/pre_deal_data/make_one_label_csv.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/train_data/make_train_data_with_lastLabel1.py" />
+        <option value="$PROJECT_DIR$/pre_deal_data/add_lastLabel1_csv.py" />
+        <option value="$PROJECT_DIR$/pre_deal_data/make_train_data_with_lastLabel1.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/predict/balance_predict/add_real1_predict0_result" />
+        <option value="$PROJECT_DIR$/database/baseModel.py" />
+        <option value="$PROJECT_DIR$/sql/sql_get_day_weight" />
+        <option value="$PROJECT_DIR$/sql/sql_get_day_speak" />
+        <option value="$PROJECT_DIR$/sql/sql1" />
+        <option value="$PROJECT_DIR$/sql/sql_get_check" />
+        <option value="$PROJECT_DIR$/sql/hh" />
+        <option value="$PROJECT_DIR$/pre_deal_data/add_null_weight.py" />
+        <option value="$PROJECT_DIR$/sql/h1" />
+        <option value="$PROJECT_DIR$/sql/try.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/predict/balance_predict/balance_result" />
+        <option value="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/read" />
+        <option value="$PROJECT_DIR$/draw_data/draw1.py" />
+        <option value="$PROJECT_DIR$/draw_data/draw2.py" />
+        <option value="$PROJECT_DIR$/draw_data/draw3.py" />
+        <option value="$PROJECT_DIR$/draw_data/test_run_day_percent.py" />
+        <option value="$PROJECT_DIR$/draw_data/try2.py" />
+        <option value="$PROJECT_DIR$/ReadMe" />
+        <option value="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/make_many_label1_analysis.py" />
+        <option value="$PROJECT_DIR$/draw_data/try.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/predict/balance_predict/make_real_predict_analysis.py" />
+        <option value="$PROJECT_DIR$/database/TrainDataModel.py" />
+        <option value="$PROJECT_DIR$/every_day_run/get_data_and_predict.py" />
+        <option value="$PROJECT_DIR$/pull.py" />
+        <option value="$PROJECT_DIR$/readme.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="802" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Probable bugsCSS</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Predict_leave" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Predict_leave" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/draw_data" />
+      <recent name="$PROJECT_DIR$/pre_deal_data" />
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/logistic_predict/train_data/train_data_with_lastLabel" />
+      <recent name="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.get_data_and_predict">
+    <configuration name="TrainDataModel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/database" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Predict_leave" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/database/TrainDataModel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="get_data_and_predict" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/every_day_run" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Predict_leave" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/every_day_run/get_data_and_predict.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="pull" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Predict_leave" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pull.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="try" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/draw_data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Predict_leave" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/draw_data/try.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="try2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/draw_data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Predict_leave" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/draw_data/try2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.try" />
+      <item index="1" class="java.lang.String" itemvalue="Python.get_data_and_predict" />
+      <item index="2" class="java.lang.String" itemvalue="Python.try2" />
+      <item index="3" class="java.lang.String" itemvalue="Python.pull" />
+      <item index="4" class="java.lang.String" itemvalue="Python.TrainDataModel" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.get_data_and_predict" />
+        <item index="1" class="java.lang.String" itemvalue="Python.pull" />
+        <item index="2" class="java.lang.String" itemvalue="Python.TrainDataModel" />
+        <item index="3" class="java.lang.String" itemvalue="Python.try" />
+        <item index="4" class="java.lang.String" itemvalue="Python.try2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="057607dd-1246-4466-9d3e-4c4aec8468e5" name="Default" comment="" />
+      <created>1533724192154</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533724192154</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="802" extended-state="0" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26449788" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32673267" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29613733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938522" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0937053" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42755464" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/try/try1.py" />
+    <entry file="file://$PROJECT_DIR$/try/try2.py" />
+    <entry file="file://$PROJECT_DIR$/try/try3.py" />
+    <entry file="file://$PROJECT_DIR$/try/try4.py" />
+    <entry file="file://$PROJECT_DIR$/another_read" />
+    <entry file="file://$PROJECT_DIR$/database/sql" />
+    <entry file="file://$PROJECT_DIR$/pre_deal_data/watch_data.py" />
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/labelAll.csv" />
+    <entry file="file://$PROJECT_DIR$/data/train_data_with_lastLabel/add_train_data_for_real1_predict0/7_day_add_data.csv" />
+    <entry file="file://$PROJECT_DIR$/logistic_predict/train_data/make_train_data_with_lastLabel1.py" />
+    <entry file="file://$PROJECT_DIR$/pre_deal_data/add_lastLabel1_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pre_deal_data/make_train_data_with_lastLabel1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pre_deal_data/make_one_label_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/train_data_with_lastLabel/26day_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/w.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pre_deal_data/wash_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2907">
+          <caret line="155" column="64" lean-forward="false" selection-start-line="155" selection-start-column="64" selection-end-line="155" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/add_lastLabel1.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-1221">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/train_data_with_lastLabel/1day_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="220" column="43" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/balance_predict/add_real1_predict0_result">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/sql1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/sql_get_day_weight">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects2/lib/python3.7/site-packages/pymysql/cursors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3097">
+          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/sql_get_check">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14668">
+          <caret line="772" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="885" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/sql_get_day_speak">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13167">
+          <caret line="693" column="72" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="718" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/task_last_day_predict/last_day_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/try.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/h1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="42" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pre_deal_data/add_null_weight.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="67" column="25" lean-forward="false" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#10#0" expanded="false" />
+            <element signature="e#7380#15152#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects2/lib/python3.7/site-packages/xlwt/Workbook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="343" column="8" lean-forward="false" selection-start-line="343" selection-start-column="8" selection-end-line="343" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/every_day_run/every_day_result/result.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw_data/try2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="27" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw_data/try.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/balance_predict/balance_result">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="263" column="0" lean-forward="false" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/baseModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/TrainDataModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="2691" column="0" lean-forward="false" selection-start-line="2691" selection-start-column="0" selection-end-line="2691" selection-end-column="0" />
+          <folding>
+            <element signature="e#10#20#0" expanded="false" />
+            <marker date="1534322738720" expanded="true" signature="266:470" ph="SELECT term.... TB_TERM" />
+            <marker date="1534322738720" expanded="true" signature="766:2077" ph="select body.... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw_data/draw1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw_data/draw2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw_data/draw3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw_data/test_run_day_percent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1499">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/make_many_label1_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="358" column="48" lean-forward="false" selection-start-line="358" selection-start-column="33" selection-end-line="358" selection-end-column="48" />
+          <folding>
+            <element signature="e#140#961#0" expanded="false" />
+            <element signature="e#996#1562#0" expanded="false" />
+            <element signature="e#1618#3031#0" expanded="false" />
+            <element signature="e#3120#4359#0" expanded="false" />
+            <element signature="e#4435#4824#0" expanded="false" />
+            <element signature="e#5044#5512#0" expanded="false" />
+            <element signature="e#5581#9585#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/read">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4113">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/real1_predict0_result">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/balance_predict/make_real_predict_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/every_day_run/get_data_and_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="2442" column="4" lean-forward="false" selection-start-line="2442" selection-start-column="4" selection-end-line="2442" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#47613#49236#0" expanded="false" />
+            <element signature="e#49900#50478#0" expanded="false" />
+            <marker date="1534323292129" expanded="true" signature="567:956" ph="SELECT term.... TB_TERM" />
+            <marker date="1534323292129" expanded="true" signature="1743:6765" ph="select sub2.... term_num" />
+            <marker date="1534323292129" expanded="true" signature="4444:6721" ph="select sub.t... TERM_NUM" />
+            <marker date="1534323292129" expanded="true" signature="4716:6675" ph="select term.... tb_weight_record" />
+            <marker date="1534323292129" expanded="true" signature="5636:6292" ph="select body.... TB_BODY_DATA" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pull.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="171">
+            <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadMe">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
