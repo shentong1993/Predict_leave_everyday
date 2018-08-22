@@ -1,7 +1,6 @@
 #第二个运行 洗数据  , 生成  w.csv
 import csv
 import numpy as np
-import matplotlib.pyplot as plt
 
 def processData(filePath):
 
@@ -29,6 +28,7 @@ def processData(filePath):
 
     return dataList
 
+# 洗数据
 def wash():
     # /Users/shen/PycharmProjects/Predict_leave/data/trainData.csv
     data_list = processData('./data/trainData.csv')

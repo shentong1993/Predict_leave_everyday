@@ -3,8 +3,8 @@ import os
 import numpy as np
 import random
 import math
-
 from sklearn import linear_model
+
 
 def generate_analysis_name_dic():
 
@@ -58,7 +58,7 @@ def processData(filePath):
 
     return dataList
 
-
+# 形成数据和标签的数据结构
 def generate_data_and_label(file_path, day_len):
     #label,week0Height,day1Weight,breakfast1,lunch1,dinner1,trainning1,speak1,greed1,pressure1,menstrual1
     # feature_map = ['week0Height','day1Weight','breakfast1','lunch1','dinner1','trainning1','speak1','greed1','pressure1','menstrual1']
@@ -91,22 +91,19 @@ def generate_data_and_label(file_path, day_len):
         trainDatas.append(data)
         trainLabels.append(person['label'])
 
-        # if file_path =='../../../data/train_data_with_lastLabel/add_train_data_for_real1_predict0/%d_day_add_data.csv'%day_len:
-        #     trainLabels.append(1)
-        # else:
-        #     trainLabels.append(person['label'])
+
 
     return trainDatas, trainLabels
 
 
-
+# 为多个分类器生成各自的数据集
 def generate_balance_data(trainDatas, trainLabels,day_len, num_of_label1_list):
 
     trainDatas_array = np.array(trainDatas)
     trainLabels_array = np.array(trainLabels)
 
-    # print('label 1 = ',np.sum(trainLabels_array== 1))
-    # print('label 0 = ',np.sum(trainLabels_array== 0))
+    print('label 1 = ',np.sum(trainLabels_array== 1))
+    print('label 0 = ',np.sum(trainLabels_array== 0))
 
     label_1_position =  np.where(trainLabels_array == 1)[0]
     label_1_position_list = label_1_position.tolist()
@@ -138,14 +135,12 @@ def generate_balance_data(trainDatas, trainLabels,day_len, num_of_label1_list):
     return total_train_Datas_List,total_train_Labels_List
 
 
-
+# 生成多个分类器，并装入列表
 def generateClf(total_train_Datas_List , total_train_Labels_List):
 
     clf_list = []
 
     clf_num = len(total_train_Datas_List)
-
-
 
     for i in range(clf_num):
         # 拿掉新加的 lastLabel 这个维度
@@ -170,6 +165,7 @@ def logistic_self(x, w , b):
 
     return y
 
+# 用多个分类器进行预测
 def many_clf_predict(clf_list ,data):
 
     label_list = []
@@ -316,15 +312,19 @@ def test_accuracy(clf_list, trainDatas, trainLabels, day_len):
     print('正样本预测错的%d-23天离开的 ='%day_len,value,'人','剩余人数 =',not_value,'人， 正样本有价值的召回率 =',round((acc_count_1+value)/trainLabels_num_1 *100 ,2),'%')
 
 
-#[{'termID': 261, 'term_num': 114, 'predict_day': 22 , 'predict_data':[{'apply_Id':_ , 'term_num':_ ,}...]}, ,,]
+#[{'termID': 261, 'term_num': 114, 'predict_day': 22 , 'camp_start_time': '2018-07-23 00:00:00', 'predict_data':[{'apply_Id':_ , 'term_num':_ ,}...]}, ,,]
 def predict_leave(not_over_term_list):
     #predict0_list =[{'term_num':_ , 'name':_}, ,,]
     predict0_list =[]
 
     for term_num_dic in not_over_term_list:
+
+        # print('预测',term_num_dic['term_num'],'期 =',len(term_num_dic['predict_data']),'人')
+
+
         day_len = term_num_dic['predict_day']
         #算法只能预测1-26天
-        if day_len <=26:
+        if day_len <=26 and day_len >=1:
 
             feature_map = []
             for day in range(1, day_len + 1):
@@ -342,6 +342,7 @@ def predict_leave(not_over_term_list):
             file_path = '../data/train_data_with_lastLabel/%dday_data.csv'%day
             trainDatas, trainLabels = generate_data_and_label(file_path,day_len=day)
             total_train_Datas_List, total_train_Labels_List = generate_balance_data(trainDatas, trainLabels,day,num_of_label1_list=1000)
+
             clf_list = generateClf(total_train_Datas_List, total_train_Labels_List)
 
             #开始预测
@@ -352,12 +353,24 @@ def predict_leave(not_over_term_list):
 
                 predict_label = many_clf_predict(clf_list , [data])
 
+                # #全输出以查看
+                # predict_label = 0
+
                 if predict_label == 0:
+
                     predict_dic = {}
                     predict_dic['term'] = person['term_num']
                     predict_dic['name'] = person['name']
+                    predict_dic['phone'] = person['phone']
                     predict_dic['camp_start_time'] = term_num_dic['camp_start_time']
                     predict_dic['day'] = term_num_dic['predict_day']
+                    predict_dic['stay_day'] = term_num_dic['predict_day']
+
+
+                    #把每个人的属性也输出出来
+                    for feature in feature_map:
+                        predict_dic[feature] = person[feature]
+
                     predict0_list.append(predict_dic)
 
     return predict0_list
@@ -366,25 +379,23 @@ def predict_leave(not_over_term_list):
 
 
 
-#
-#
-#
-#
-# if __name__ == '__main__':
-#     day_list  = [i for i in range(1,27)]
-#     for day in day_list:
-#         print('day = ',day)
-#
-#         file_path = '../../../data/train_data_with_lastLabel/%dday_data.csv'%day
-#         trainDatas, trainLabels = generate_data_and_label(file_path,day_len=day)
-#         total_train_Datas_List, total_train_Labels_List = generate_balance_data(trainDatas, trainLabels,day,num_of_label1_list=1000)
-#         # total_train_Datas_List = [  [[129,11,22..],[... ]] , []*9]
-#         # total_train_Labels_List = [ [1,0,1...] ,[]*9
-#
-#         clf_list = generateClf(total_train_Datas_List, total_train_Labels_List)
-#
-#         test_accuracy(clf_list, trainDatas, trainLabels ,day_len= day)
-#         print("\n"*3)
+
+
+if __name__ == '__main__':
+    day_list  = [i for i in range(1,27)]
+    for day in day_list:
+        print('day = ',day)
+
+        file_path = '../../../data/train_data_with_lastLabel/%dday_data.csv'%day
+        trainDatas, trainLabels = generate_data_and_label(file_path,day_len=day)
+        total_train_Datas_List, total_train_Labels_List = generate_balance_data(trainDatas, trainLabels,day,num_of_label1_list=1000)
+        # total_train_Datas_List = [  [[129,11,22..],[... ]] , []*9]
+        # total_train_Labels_List = [ [1,0,1...] ,[]*9
+
+        clf_list = generateClf(total_train_Datas_List, total_train_Labels_List)
+
+        test_accuracy(clf_list, trainDatas, trainLabels ,day_len= day)
+        print("\n"*3)
 
 
 

@@ -1,7 +1,7 @@
 import csv
 import numpy as np
 import os
-from sklearn.cluster import AffinityPropagation, KMeans
+from sklearn.cluster import KMeans
 
 
 def processData(filePath):

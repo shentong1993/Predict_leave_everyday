@@ -2,7 +2,6 @@ import csv
 import numpy as np
 import random
 import os
-
 from sklearn import linear_model
 
 def generate_analysis_name_dic():
@@ -61,7 +60,7 @@ def processData(filePath):
 
     return dataList
 
-
+# 形成 数据 和 标签 的数据结构
 def generate_data_and_label( file_path,day_len):
     #label,week0Height,day1Weight,breakfast1,lunch1,dinner1,trainning1,speak1,greed1,pressure1,menstrual1
     # feature_map = ['week0Height','day1Weight','breakfast1','lunch1','dinner1','trainning1','speak1','greed1','pressure1','menstrual1']
@@ -100,6 +99,7 @@ def generate_data_and_label( file_path,day_len):
 
 
     return trainDatas, trainLabels
+
 
 
 def generate_balance_data(trainDatas, trainLabels,day_len):
@@ -275,27 +275,27 @@ def test_accuracy1(clf, trainDatas, trainLabels, day_len):
 
 
 
-#
-# if __name__ == '__main__':
-#
-#     # for day_len in range(1,27):
-#     for day_len in range(1, 27):
-#
-#         print('day = ',day_len)
-#         # data_list = processData('../../train_data/train_data_with_lastLabel/%dday_data.csv'%day_len)
-#         #/Users/shen/PycharmProjects/Predict_leave/data/train_data_with_lastLabel/1day_data.csv
-#         file_path = '../../../data/train_data_with_lastLabel/%dday_data.csv'%day_len
-#         trainDatas, trainLabels = generate_data_and_label(file_path, day_len)
-#
-#         #使正样本和负样本同样多
-#         balance_trainDatas , balance_trainLabels  = generate_balance_data(trainDatas, trainLabels, day_len)
-#
-#
-#         clf = generateClf(balance_trainDatas , balance_trainLabels)
-#
-#         test_accuracy1(clf,  trainDatas, trainLabels , day_len)
-#
-#         print('\n'*3)
+
+if __name__ == '__main__':
+
+    # for day_len in range(1,27):
+    for day_len in range(1, 27):
+
+        print('day = ',day_len)
+        # data_list = processData('../../train_data/train_data_with_lastLabel/%dday_data.csv'%day_len)
+        #/Users/shen/PycharmProjects/Predict_leave/data/train_data_with_lastLabel/1day_data.csv
+        file_path = '../../../data/train_data_with_lastLabel/%dday_data.csv'%day_len
+        trainDatas, trainLabels = generate_data_and_label(file_path, day_len)
+
+        #使正样本和负样本同样多
+        balance_trainDatas , balance_trainLabels  = generate_balance_data(trainDatas, trainLabels, day_len)
+
+
+        clf = generateClf(balance_trainDatas , balance_trainLabels)
+
+        test_accuracy1(clf,  trainDatas, trainLabels , day_len)
+
+        print('\n'*3)
 
 
 

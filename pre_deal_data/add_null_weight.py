@@ -1,8 +1,4 @@
 import csv
-import numpy as np
-import matplotlib.pyplot as plt
-import math
-
 
 def processData(filePath):
     dataList = []
@@ -14,8 +10,6 @@ def processData(filePath):
         # strip() 去掉行尾的换行符
 
         # print(records[0].strip().split(','))
-        # print(type(records[0]))
-
         keys = records[0].strip().split(',')
 
         for i, record in enumerate(records):
@@ -41,7 +35,7 @@ def add_null_weight(data_list):
 
     return data_list
 
-
+# 对数据集从前向后补体重
 def add_weight():
 
     data_list = processData('./data/labelAll.csv')
@@ -729,6 +723,6 @@ def add_weight():
                 i['label27']
             ])
 
-#
-# if __name__ == '__main__':
-#     add_weight()
+
+if __name__ == '__main__':
+    add_weight()

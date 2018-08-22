@@ -2,8 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="057607dd-1246-4466-9d3e-4c4aec8468e5" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/ReadMe" afterPath="$PROJECT_DIR$/ReadMe" />
+      <change beforePath="$PROJECT_DIR$/data/add_lastLabel1.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/add_null_weight.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/labelAll.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/trainData.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/10day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/11day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/12day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/13day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/14day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/15day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/16day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/17day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/18day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/19day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/1day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/20day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/21day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/22day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/23day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/24day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/25day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/26day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/2day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/3day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/4day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/5day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/6day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/7day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/8day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/train_data_with_lastLabel/9day_data.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/w.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/database/TrainDataModel.py" afterPath="$PROJECT_DIR$/database/TrainDataModel.py" />
+      <change beforePath="$PROJECT_DIR$/draw_data/draw1.py" afterPath="$PROJECT_DIR$/draw_data/draw1.py" />
+      <change beforePath="$PROJECT_DIR$/draw_data/draw2.py" afterPath="$PROJECT_DIR$/draw_data/draw2.py" />
+      <change beforePath="$PROJECT_DIR$/draw_data/draw3.py" afterPath="$PROJECT_DIR$/draw_data/draw3.py" />
+      <change beforePath="$PROJECT_DIR$/draw_data/test_run_day_percent.py" afterPath="$PROJECT_DIR$/draw_data/test_run_day_percent.py" />
+      <change beforePath="$PROJECT_DIR$/draw_data/try.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/every_day_run/every_day_result/tmp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/every_day_run/get_data_and_predict.py" afterPath="$PROJECT_DIR$/every_day_run/get_data_and_predict.py" />
+      <change beforePath="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real0_predic0_feature_cluster/get_data_and_cluster.py" afterPath="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real0_predic0_feature_cluster/get_data_and_cluster.py" />
+      <change beforePath="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/get_data_and_cluster.py" afterPath="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/get_data_and_cluster.py" />
+      <change beforePath="$PROJECT_DIR$/logistic_predict/predict/balance_predict/make_real_predict_analysis.py" afterPath="$PROJECT_DIR$/logistic_predict/predict/balance_predict/make_real_predict_analysis.py" />
+      <change beforePath="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/make_many_label1_analysis.py" afterPath="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/make_many_label1_analysis.py" />
+      <change beforePath="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/read" afterPath="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/read" />
+      <change beforePath="$PROJECT_DIR$/pre_deal_data/add_lastLabel1_csv.py" afterPath="$PROJECT_DIR$/pre_deal_data/add_lastLabel1_csv.py" />
+      <change beforePath="$PROJECT_DIR$/pre_deal_data/add_null_weight.py" afterPath="$PROJECT_DIR$/pre_deal_data/add_null_weight.py" />
+      <change beforePath="$PROJECT_DIR$/pre_deal_data/make_one_label_csv.py" afterPath="$PROJECT_DIR$/pre_deal_data/make_one_label_csv.py" />
+      <change beforePath="$PROJECT_DIR$/pre_deal_data/make_train_data_with_lastLabel1.py" afterPath="$PROJECT_DIR$/pre_deal_data/make_train_data_with_lastLabel1.py" />
+      <change beforePath="$PROJECT_DIR$/pre_deal_data/wash_data.py" afterPath="$PROJECT_DIR$/pre_deal_data/wash_data.py" />
+      <change beforePath="$PROJECT_DIR$/pull.py" afterPath="$PROJECT_DIR$/pull.py" />
+      <change beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,29 +67,34 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Predict_leave$make_train_data_with_lastLabel1.coverage" NAME="make_train_data_with_lastLabel1 Coverage Results" MODIFIED="1533791782204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/train_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$get_data_and_predict.coverage" NAME="get_data_and_predict Coverage Results" MODIFIED="1534939144921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/every_day_run" />
+    <SUITE FILE_PATH="coverage/Predict_leave$test_result__1_.coverage" NAME="test_result (1) Coverage Results" MODIFIED="1534478429437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test2" />
+    <SUITE FILE_PATH="coverage/Predict_leave$add_lastLabel1_csv.coverage" NAME="add_lastLabel1_csv Coverage Results" MODIFIED="1533791756176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pre_deal_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$try__1_.coverage" NAME="try (1) Coverage Results" MODIFIED="1534851831997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test3" />
+    <SUITE FILE_PATH="coverage/Predict_leave$connections.coverage" NAME="connections Coverage Results" MODIFIED="1534674710214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/PycharmProjects2/lib/python3.7/site-packages/pymysql" />
+    <SUITE FILE_PATH="coverage/Predict_leave$draw3.coverage" NAME="draw3 Coverage Results" MODIFIED="1534304684575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$try3.coverage" NAME="try3 Coverage Results" MODIFIED="1534063018119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/try" />
+    <SUITE FILE_PATH="coverage/Predict_leave$pp.coverage" NAME="pp Coverage Results" MODIFIED="1534571356012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test3" />
+    <SUITE FILE_PATH="coverage/Predict_leave$make_many_label1_analysis.coverage" NAME="make_many_label1_analysis Coverage Results" MODIFIED="1534826849549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict" />
+    <SUITE FILE_PATH="coverage/Predict_leave$make_real_predict_analysis.coverage" NAME="make_real_predict_analysis Coverage Results" MODIFIED="1534331842545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/predict/balance_predict" />
+    <SUITE FILE_PATH="coverage/Predict_leave$balance_predict.coverage" NAME="balance_predict Coverage Results" MODIFIED="1533805928259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/predict/balance_predict" />
+    <SUITE FILE_PATH="coverage/Predict_leave$try2.coverage" NAME="try2 Coverage Results" MODIFIED="1534319106502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$TrainDataModel.coverage" NAME="TrainDataModel Coverage Results" MODIFIED="1534666322494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database" />
+    <SUITE FILE_PATH="coverage/Predict_leave$no_weight_make_many_label1_analysis.coverage" NAME="no_weight_make_many_label1_analysis Coverage Results" MODIFIED="1534830813455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/predict/no_weight_many_label1_predict" />
+    <SUITE FILE_PATH="coverage/Predict_leave$try.coverage" NAME="try Coverage Results" MODIFIED="1534734839606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Predict_leave$test_result.coverage" NAME="test_result Coverage Results" MODIFIED="1534411534882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Predict_leave$try1.coverage" NAME="try1 Coverage Results" MODIFIED="1533901373478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/try" />
     <SUITE FILE_PATH="coverage/Predict_leave$try4.coverage" NAME="try4 Coverage Results" MODIFIED="1534063671426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/try" />
     <SUITE FILE_PATH="coverage/Predict_leave$draw1.coverage" NAME="draw1 Coverage Results" MODIFIED="1534303979196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
-    <SUITE FILE_PATH="coverage/Predict_leave$get_data_and_predict.coverage" NAME="get_data_and_predict Coverage Results" MODIFIED="1534323082284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/every_day_run" />
     <SUITE FILE_PATH="coverage/Predict_leave$add_null_weight.coverage" NAME="add_null_weight Coverage Results" MODIFIED="1534132167246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pre_deal_data" />
     <SUITE FILE_PATH="coverage/Predict_leave$make_one_label_csv.coverage" NAME="make_one_label_csv Coverage Results" MODIFIED="1533730768599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pre_deal_data" />
-    <SUITE FILE_PATH="coverage/Predict_leave$add_lastLabel1_csv.coverage" NAME="add_lastLabel1_csv Coverage Results" MODIFIED="1533791756176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pre_deal_data" />
-    <SUITE FILE_PATH="coverage/Predict_leave$try__1_.coverage" NAME="try (1) Coverage Results" MODIFIED="1533882363428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/final_add" />
     <SUITE FILE_PATH="coverage/Predict_leave$watch_data.coverage" NAME="watch_data Coverage Results" MODIFIED="1534130302719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pre_deal_data" />
-    <SUITE FILE_PATH="coverage/Predict_leave$draw3.coverage" NAME="draw3 Coverage Results" MODIFIED="1534304684575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
-    <SUITE FILE_PATH="coverage/Predict_leave$try3.coverage" NAME="try3 Coverage Results" MODIFIED="1534063018119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/try" />
     <SUITE FILE_PATH="coverage/Predict_leave$get_data_and_cluster__1_.coverage" NAME="get_data_and_cluster (1) Coverage Results" MODIFIED="1533886566007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real0_predic0_feature_cluster" />
     <SUITE FILE_PATH="coverage/Predict_leave$get_data_and_cluster.coverage" NAME="get_data_and_cluster Coverage Results" MODIFIED="1533886530868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster" />
     <SUITE FILE_PATH="coverage/Predict_leave$test_run_day_percent.coverage" NAME="test_run_day_percent Coverage Results" MODIFIED="1534314571528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
-    <SUITE FILE_PATH="coverage/Predict_leave$make_many_label1_analysis.coverage" NAME="make_many_label1_analysis Coverage Results" MODIFIED="1534299065192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict" />
-    <SUITE FILE_PATH="coverage/Predict_leave$make_real_predict_analysis.coverage" NAME="make_real_predict_analysis Coverage Results" MODIFIED="1534242475314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/predict/balance_predict" />
-    <SUITE FILE_PATH="coverage/Predict_leave$pull.coverage" NAME="pull Coverage Results" MODIFIED="1534325648652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Predict_leave$balance_predict.coverage" NAME="balance_predict Coverage Results" MODIFIED="1533805928259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/predict/balance_predict" />
-    <SUITE FILE_PATH="coverage/Predict_leave$try2.coverage" NAME="try2 Coverage Results" MODIFIED="1534319106502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
-    <SUITE FILE_PATH="coverage/Predict_leave$TrainDataModel.coverage" NAME="TrainDataModel Coverage Results" MODIFIED="1534322460466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database" />
-    <SUITE FILE_PATH="coverage/Predict_leave$last_day_predict.coverage" NAME="last_day_predict Coverage Results" MODIFIED="1533896883954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/predict/task_last_day_predict" />
+    <SUITE FILE_PATH="coverage/Predict_leave$pull.coverage" NAME="pull Coverage Results" MODIFIED="1534939697211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Predict_leave$draw2.coverage" NAME="draw2 Coverage Results" MODIFIED="1534304181693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
-    <SUITE FILE_PATH="coverage/Predict_leave$try.coverage" NAME="try Coverage Results" MODIFIED="1534321406190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/draw_data" />
+    <SUITE FILE_PATH="coverage/Predict_leave$last_day_predict.coverage" NAME="last_day_predict Coverage Results" MODIFIED="1534654946651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/logistic_predict/predict/last_n_day_predict" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -54,11 +112,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ReadMe" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReadMe">
+      <file leaf-file-name="pull.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pull.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding>
+                <element signature="e#188#236#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_data_and_predict.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/every_day_run/get_data_and_predict.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="2826" column="0" lean-forward="true" selection-start-line="2826" selection-start-column="0" selection-end-line="2826" selection-end-column="0" />
+              <folding>
+                <element signature="e#194#209#0" expanded="true" />
+                <element signature="e#651#1754#0" expanded="false" />
+                <element signature="e#2065#8982#0" expanded="false" />
+                <element signature="e#9063#10130#0" expanded="false" />
+                <element signature="e#10174#31805#0" expanded="false" />
+                <element signature="e#31849#49318#0" expanded="false" />
+                <element signature="e#49429#51052#0" expanded="false" />
+                <element signature="e#51112#51676#0" expanded="false" />
+                <element signature="e#51730#52308#0" expanded="false" />
+                <element signature="e#54744#55349#0" expanded="false" />
+                <element signature="e#57806#58938#0" expanded="false" />
+                <element signature="e#59016#59992#0" expanded="false" />
+                <element signature="e#60060#61506#0" expanded="false" />
+                <element signature="e#61585#62347#0" expanded="false" />
+                <element signature="e#64865#67115#0" expanded="false" />
+                <element signature="e#67286#68017#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,8 +175,8 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="152">
-                <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+              <first_editor relative-caret-position="-651">
+                <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -77,101 +184,52 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="run_docker.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run_docker.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadMe" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReadMe">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4484">
+              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get_data_and_predict.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/every_day_run/get_data_and_predict.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45334">
-              <caret line="2442" column="27" lean-forward="false" selection-start-line="2442" selection-start-column="27" selection-end-line="2442" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#47613#49236#0" expanded="false" />
-                <element signature="e#49900#50478#0" expanded="false" />
-                <marker date="1534323292129" expanded="true" signature="567:956" ph="SELECT term.... TB_TERM" />
-                <marker date="1534323292129" expanded="true" signature="1743:6765" ph="select sub2.... term_num" />
-                <marker date="1534323292129" expanded="true" signature="4444:6721" ph="select sub.t... TERM_NUM" />
-                <marker date="1534323292129" expanded="true" signature="4716:6675" ph="select term.... tb_weight_record" />
-                <marker date="1534323292129" expanded="true" signature="5636:6292" ph="select body.... TB_BODY_DATA" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="try.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw_data/try.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="11.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/11.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="make_many_label1_analysis.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/make_many_label1_analysis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1463">
-              <caret line="358" column="48" lean-forward="false" selection-start-line="358" selection-start-column="33" selection-end-line="358" selection-end-column="48" />
-              <folding>
-                <element signature="e#140#961#0" expanded="false" />
-                <element signature="e#996#1562#0" expanded="false" />
-                <element signature="e#1618#3031#0" expanded="false" />
-                <element signature="e#3120#4359#0" expanded="false" />
-                <element signature="e#4435#4824#0" expanded="false" />
-                <element signature="e#5044#5512#0" expanded="false" />
-                <element signature="e#5581#9585#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="make_real_predict_analysis.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logistic_predict/predict/balance_predict/make_real_predict_analysis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pull.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pull.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -188,6 +246,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>print</find>
+      <find>operator</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,57 +255,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/logistic_predict/predict/balance_predict/try.py" />
-        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/final_add/t.csv.py" />
-        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/final_add/t.csv" />
-        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/final_add/try.py" />
-        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/get_data_and_cluster.py" />
-        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real0_predic0_feature_cluster/get_data_and_cluster.py" />
-        <option value="$PROJECT_DIR$/logistic_predict/train_data/train_data_with_lastLabel/add_train_data_for_real1_predict0/1_day_add_data.csv" />
-        <option value="$PROJECT_DIR$/logistic_predict/predict/task_last_day_predict/last_day_predict.py" />
-        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/cluster_data/7day/keep_27_day/3.csv" />
-        <option value="$PROJECT_DIR$/logistic_predict/train_data/train_data_with_lastLabel/add_train_data_for_real1_predict0/7_day_add_data.csv" />
-        <option value="$PROJECT_DIR$/logistic_predict/train_data/train_data_with_lastLabel/add_train_data_for_real1_predict0/14_day_add_data.csv" />
-        <option value="$PROJECT_DIR$/logistic_predict/train_data/train_data_with_lastLabel/add_train_data_for_real1_predict0/21_day_add_data.csv" />
-        <option value="$PROJECT_DIR$/try/try2.py" />
-        <option value="$PROJECT_DIR$/try/try3.py" />
-        <option value="$PROJECT_DIR$/try/try1.py" />
-        <option value="$PROJECT_DIR$/try/try4.py" />
-        <option value="$PROJECT_DIR$/another_read" />
-        <option value="$PROJECT_DIR$/pre_deal_data/watch_data.py" />
-        <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/pre_deal_data/wash_data.py" />
-        <option value="$PROJECT_DIR$/pre_deal_data/make_one_label_csv.py" />
-        <option value="$PROJECT_DIR$/logistic_predict/train_data/make_train_data_with_lastLabel1.py" />
-        <option value="$PROJECT_DIR$/pre_deal_data/add_lastLabel1_csv.py" />
-        <option value="$PROJECT_DIR$/pre_deal_data/make_train_data_with_lastLabel1.py" />
-        <option value="$PROJECT_DIR$/logistic_predict/predict/balance_predict/add_real1_predict0_result" />
-        <option value="$PROJECT_DIR$/database/baseModel.py" />
-        <option value="$PROJECT_DIR$/sql/sql_get_day_weight" />
-        <option value="$PROJECT_DIR$/sql/sql_get_day_speak" />
-        <option value="$PROJECT_DIR$/sql/sql1" />
         <option value="$PROJECT_DIR$/sql/sql_get_check" />
         <option value="$PROJECT_DIR$/sql/hh" />
-        <option value="$PROJECT_DIR$/pre_deal_data/add_null_weight.py" />
         <option value="$PROJECT_DIR$/sql/h1" />
         <option value="$PROJECT_DIR$/sql/try.py" />
         <option value="$PROJECT_DIR$/logistic_predict/predict/balance_predict/balance_result" />
+        <option value="$PROJECT_DIR$/draw_data/try2.py" />
+        <option value="$PROJECT_DIR$/draw_data/try.py" />
+        <option value="$PROJECT_DIR$/test/11.py" />
         <option value="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/read" />
+        <option value="$PROJECT_DIR$/every_day_run/test.py" />
+        <option value="$PROJECT_DIR$/test/test_result.py" />
+        <option value="$PROJECT_DIR$/test/result" />
+        <option value="$PROJECT_DIR$/test2/rean" />
+        <option value="$PROJECT_DIR$/test2/test_result.py" />
+        <option value="$PROJECT_DIR$/test3/pp.py" />
+        <option value="$PROJECT_DIR$/test3/read" />
+        <option value="$PROJECT_DIR$/logistic_predict/predict/last_n_day_predict/read" />
+        <option value="$PROJECT_DIR$/logistic_predict/predict/last_n_day_predict/last_day_predict.py" />
+        <option value="$PROJECT_DIR$/test/sql" />
+        <option value="$PROJECT_DIR$/database/sql" />
+        <option value="$PROJECT_DIR$/no_weight_data/no_weight_train_data_with_lastLabel/holdplace" />
+        <option value="$PROJECT_DIR$/test/try.py" />
+        <option value="$PROJECT_DIR$/test3/try.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/pycharm.vmoptions" />
+        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/get_data_and_cluster.py" />
+        <option value="$PROJECT_DIR$/every_day_run/every_day_result/如何使用" />
+        <option value="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real0_predic0_feature_cluster/get_data_and_cluster.py" />
         <option value="$PROJECT_DIR$/draw_data/draw1.py" />
         <option value="$PROJECT_DIR$/draw_data/draw2.py" />
         <option value="$PROJECT_DIR$/draw_data/draw3.py" />
         <option value="$PROJECT_DIR$/draw_data/test_run_day_percent.py" />
-        <option value="$PROJECT_DIR$/draw_data/try2.py" />
-        <option value="$PROJECT_DIR$/ReadMe" />
-        <option value="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/make_many_label1_analysis.py" />
         <option value="$PROJECT_DIR$/logistic_predict/predict/balance_predict/make_real_predict_analysis.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/predict/no_weight_many_label1_predict/no_weight_make_many_label1_analysis.py" />
+        <option value="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/make_many_label1_analysis.py" />
+        <option value="$PROJECT_DIR$/data/train_data_with_lastLabel/hold_place_file" />
         <option value="$PROJECT_DIR$/database/TrainDataModel.py" />
-        <option value="$PROJECT_DIR$/every_day_run/get_data_and_predict.py" />
+        <option value="$PROJECT_DIR$/pre_deal_data/wash_data.py" />
+        <option value="$PROJECT_DIR$/pre_deal_data/add_null_weight.py" />
+        <option value="$PROJECT_DIR$/pre_deal_data/make_one_label_csv.py" />
+        <option value="$PROJECT_DIR$/pre_deal_data/add_lastLabel1_csv.py" />
+        <option value="$PROJECT_DIR$/pre_deal_data/make_train_data_with_lastLabel1.py" />
         <option value="$PROJECT_DIR$/pull.py" />
-        <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/draw_data/try.py" />
+        <option value="$PROJECT_DIR$/every_day_run/get_data_and_predict.py" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/ReadMe" />
+        <option value="$PROJECT_DIR$/run_docker.sh" />
+        <option value="$PROJECT_DIR$/run.sh" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/test/11.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/build.sh" />
       </list>
     </option>
   </component>
@@ -257,9 +316,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="3" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="802" />
+    <option name="width" value="1428" />
+    <option name="height" value="825" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -302,7 +362,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -313,18 +372,25 @@
             <path>
               <item name="Predict_leave" type="b2602c69:ProjectViewProjectNode" />
               <item name="Predict_leave" type="462c0819:PsiDirectoryNode" />
-              <item name="every_day_run" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Predict_leave" type="b2602c69:ProjectViewProjectNode" />
               <item name="Predict_leave" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="train_data_with_lastLabel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Predict_leave" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Predict_leave" type="462c0819:PsiDirectoryNode" />
+              <item name="every_day_run" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -335,11 +401,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/draw_data" />
-      <recent name="$PROJECT_DIR$/pre_deal_data" />
-      <recent name="$PROJECT_DIR$/data" />
-      <recent name="$PROJECT_DIR$/logistic_predict/train_data/train_data_with_lastLabel" />
-      <recent name="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict" />
+      <recent name="$PROJECT_DIR$/logistic_predict/predict/no_weight_many_label1_predict/data" />
+      <recent name="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/data" />
+      <recent name="$PROJECT_DIR$/logistic_predict/predict/balance_predict/data" />
+      <recent name="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/cluster_data" />
+      <recent name="$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real0_predic0_feature_cluster/cluster_data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -355,25 +421,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.pull">
-    <configuration name="TrainDataModel" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/database" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Predict_leave" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/database/TrainDataModel.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="get_data_and_predict" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -388,6 +435,44 @@
       <module name="Predict_leave" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/every_day_run/get_data_and_predict.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="make_many_label1_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Predict_leave" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/make_many_label1_analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="no_weight_make_many_label1_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/logistic_predict/predict/no_weight_many_label1_predict" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Predict_leave" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/logistic_predict/predict/no_weight_many_label1_predict/no_weight_make_many_label1_analysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -412,58 +497,39 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="try" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="try (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/draw_data" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test3" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Predict_leave" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/draw_data/try.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="try2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/draw_data" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Predict_leave" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/draw_data/try2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test3/try.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.try" />
+      <item index="0" class="java.lang.String" itemvalue="Python.pull" />
       <item index="1" class="java.lang.String" itemvalue="Python.get_data_and_predict" />
-      <item index="2" class="java.lang.String" itemvalue="Python.try2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.pull" />
-      <item index="4" class="java.lang.String" itemvalue="Python.TrainDataModel" />
+      <item index="2" class="java.lang.String" itemvalue="Python.try (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.make_many_label1_analysis" />
+      <item index="4" class="java.lang.String" itemvalue="Python.no_weight_make_many_label1_analysis" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.pull" />
         <item index="1" class="java.lang.String" itemvalue="Python.get_data_and_predict" />
-        <item index="2" class="java.lang.String" itemvalue="Python.TrainDataModel" />
-        <item index="3" class="java.lang.String" itemvalue="Python.try" />
-        <item index="4" class="java.lang.String" itemvalue="Python.try2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.try (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.no_weight_make_many_label1_analysis" />
+        <item index="4" class="java.lang.String" itemvalue="Python.make_many_label1_analysis" />
       </list>
     </recent_temporary>
   </component>
@@ -484,20 +550,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="802" extended-state="0" />
+    <frame x="3" y="23" width="1428" height="825" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26449788" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25342464" sideWeight="0.502886" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28864568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32673267" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29613733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28356165" sideWeight="0.497114" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14862914" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938522" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0937053" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.007215007" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42755464" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15697037" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -511,211 +577,334 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sh" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test3/try.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/try/try3.py" />
-    <entry file="file://$PROJECT_DIR$/try/try4.py" />
-    <entry file="file://$PROJECT_DIR$/another_read" />
-    <entry file="file://$PROJECT_DIR$/database/sql" />
-    <entry file="file://$PROJECT_DIR$/pre_deal_data/watch_data.py" />
-    <entry file="file://$PROJECT_DIR$/__init__.py">
+    <entry file="file://$PROJECT_DIR$/no_weight_data/no_weight_train_data_with_lastLabel/6day_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165148">
+          <caret line="8692" column="12" lean-forward="false" selection-start-line="8692" selection-start-column="7" selection-end-line="8692" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/no_weight_data/labelAll.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/no_weight_data/trainData.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150214">
+          <caret line="7906" column="5" lean-forward="false" selection-start-line="7906" selection-start-column="0" selection-end-line="7906" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/train_data_with_lastLabel/2day_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78071">
+          <caret line="4109" column="8" lean-forward="false" selection-start-line="4109" selection-start-column="8" selection-end-line="4109" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.3/python_stubs/-169037266/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10051">
+          <caret line="529" column="4" lean-forward="false" selection-start-line="529" selection-start-column="4" selection-end-line="529" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test3/pp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/labelAll.csv" />
-    <entry file="file://$PROJECT_DIR$/data/train_data_with_lastLabel/add_train_data_for_real1_predict0/7_day_add_data.csv" />
-    <entry file="file://$PROJECT_DIR$/logistic_predict/train_data/make_train_data_with_lastLabel1.py" />
+    <entry file="file://$PROJECT_DIR$/no_weight_data/no_weight_train_data_with_lastLabel/1day_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/no_weight_data/no_weight_train_data_with_lastLabel/2day_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="43" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/no_weight_data/add_lastLabel1.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="361">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/no_weight_many_label1_predict/data/day1/real0_predict0_list.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238254">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test3/try.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test3/read">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/pycharm.vmoptions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw_data/draw2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw_data/draw3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw_data/test_run_day_percent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real0_predic0_feature_cluster/get_data_and_cluster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3925">
+          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/get_data_and_cluster.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3906">
+          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/last_n_day_predict/last_day_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1766">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/no_weight_many_label1_predict/no_weight_make_many_label1_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8892">
+          <caret line="474" column="0" lean-forward="false" selection-start-line="474" selection-start-column="0" selection-end-line="474" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/train_data_with_lastLabel/hold_place_file">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/every_day_run/every_day_result/如何使用">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="3" lean-forward="false" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real0_predic0_feature_cluster/cluster_data/hold_place_file">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/cluster_data/hold_place_file">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/balance_predict/data/hold_place_file">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/data/hold_place_file">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/no_weight_many_label1_predict/data/hold_place_file">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyvenv.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/balance_predict/make_real_predict_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw_data/draw1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/make_many_label1_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pre_deal_data/add_lastLabel1_csv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pre_deal_data/make_train_data_with_lastLabel1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pre_deal_data/make_one_label_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/train_data_with_lastLabel/26day_data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/w.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pre_deal_data/wash_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2907">
-          <caret line="155" column="64" lean-forward="false" selection-start-line="155" selection-start-column="64" selection-end-line="155" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/add_lastLabel1.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="-1221">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/train_data_with_lastLabel/1day_data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="220" column="43" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/balance_predict/add_real1_predict0_result">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/sql1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/sql_get_day_weight">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects2/lib/python3.7/site-packages/pymysql/cursors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3097">
-          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/sql_get_check">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14668">
-          <caret line="772" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="885" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/sql_get_day_speak">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13167">
-          <caret line="693" column="72" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="718" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/task_last_day_predict/last_day_predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/try.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/h1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="42" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="42" />
+        <state relative-caret-position="13870">
+          <caret line="730" column="5" lean-forward="false" selection-start-line="730" selection-start-column="5" selection-end-line="730" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pre_deal_data/add_null_weight.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="67" column="25" lean-forward="false" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+        <state relative-caret-position="703">
+          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pre_deal_data/make_one_label_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="false" />
-            <element signature="e#7380#15152#0" expanded="false" />
+            <element signature="e#49#59#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects2/lib/python3.7/site-packages/xlwt/Workbook.py">
+    <entry file="file://$PROJECT_DIR$/pre_deal_data/make_train_data_with_lastLabel1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="343" column="8" lean-forward="false" selection-start-line="343" selection-start-column="8" selection-end-line="343" selection-end-column="8" />
+        <state relative-caret-position="274668">
+          <caret line="14698" column="0" lean-forward="false" selection-start-line="14698" selection-start-column="0" selection-end-line="14698" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pre_deal_data/wash_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#34#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/every_day_run/every_day_result/result.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw_data/try2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="27" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/balance_predict/balance_result">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="263" column="0" lean-forward="false" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pip-selfcheck.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -726,66 +915,27 @@
     <entry file="file://$PROJECT_DIR$/database/baseModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/TrainDataModel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="2691" column="0" lean-forward="false" selection-start-line="2691" selection-start-column="0" selection-end-line="2691" selection-end-column="0" />
+        <state relative-caret-position="19">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="e#10#20#0" expanded="false" />
-            <marker date="1534322738720" expanded="true" signature="266:470" ph="SELECT term.... TB_TERM" />
-            <marker date="1534322738720" expanded="true" signature="766:2077" ph="select body.... " />
+            <element signature="e#10#20#0" expanded="true" />
+            <marker date="1534934179634" expanded="true" signature="266:470" ph="SELECT term.... TB_TERM" />
+            <marker date="1534934179634" expanded="true" signature="793:2134" ph="select body.... " />
+            <marker date="1534934179634" expanded="true" signature="2832:3137" ph="select apply... TB_APPLY_RECORD" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/draw_data/draw1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw_data/draw2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw_data/draw3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw_data/test_run_day_percent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1499">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/read">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4113">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logistic_predict/analysis_add_real1_predict0/real1_predict0_feature_cluster/real1_predict0_result">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -793,26 +943,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/balance_predict/make_real_predict_analysis.py">
+    <entry file="file://$PROJECT_DIR$/pull.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#188#236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_docker.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ReadMe">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="-4484">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -820,78 +1004,36 @@
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="152">
-            <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <first_editor relative-caret-position="-651">
+            <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logistic_predict/predict/many_label1_predict/make_many_label1_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1463">
-          <caret line="358" column="48" lean-forward="false" selection-start-line="358" selection-start-column="33" selection-end-line="358" selection-end-column="48" />
-          <folding>
-            <element signature="e#140#961#0" expanded="false" />
-            <element signature="e#996#1562#0" expanded="false" />
-            <element signature="e#1618#3031#0" expanded="false" />
-            <element signature="e#3120#4359#0" expanded="false" />
-            <element signature="e#4435#4824#0" expanded="false" />
-            <element signature="e#5044#5512#0" expanded="false" />
-            <element signature="e#5581#9585#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pull.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/every_day_run/get_data_and_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45334">
-          <caret line="2442" column="27" lean-forward="false" selection-start-line="2442" selection-start-column="27" selection-end-line="2442" selection-end-column="27" />
+        <state relative-caret-position="294">
+          <caret line="2826" column="0" lean-forward="true" selection-start-line="2826" selection-start-column="0" selection-end-line="2826" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#47613#49236#0" expanded="false" />
-            <element signature="e#49900#50478#0" expanded="false" />
-            <marker date="1534323292129" expanded="true" signature="567:956" ph="SELECT term.... TB_TERM" />
-            <marker date="1534323292129" expanded="true" signature="1743:6765" ph="select sub2.... term_num" />
-            <marker date="1534323292129" expanded="true" signature="4444:6721" ph="select sub.t... TERM_NUM" />
-            <marker date="1534323292129" expanded="true" signature="4716:6675" ph="select term.... tb_weight_record" />
-            <marker date="1534323292129" expanded="true" signature="5636:6292" ph="select body.... TB_BODY_DATA" />
+            <element signature="e#194#209#0" expanded="true" />
+            <element signature="e#651#1754#0" expanded="false" />
+            <element signature="e#2065#8982#0" expanded="false" />
+            <element signature="e#9063#10130#0" expanded="false" />
+            <element signature="e#10174#31805#0" expanded="false" />
+            <element signature="e#31849#49318#0" expanded="false" />
+            <element signature="e#49429#51052#0" expanded="false" />
+            <element signature="e#51112#51676#0" expanded="false" />
+            <element signature="e#51730#52308#0" expanded="false" />
+            <element signature="e#54744#55349#0" expanded="false" />
+            <element signature="e#57806#58938#0" expanded="false" />
+            <element signature="e#59016#59992#0" expanded="false" />
+            <element signature="e#60060#61506#0" expanded="false" />
+            <element signature="e#61585#62347#0" expanded="false" />
+            <element signature="e#64865#67115#0" expanded="false" />
+            <element signature="e#67286#68017#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw_data/try.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/11.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -1,15 +1,23 @@
-import csv
+# --------------------------------------------------------
+# 每天 00:01 拉数据预测用户今天是否离开
+# Copyright (c) Fittime 2018
+# Written by Shentong
+# --------------------------------------------------------
+import operator
 import time
 from xlwt import *
 from peewee import *
 from database.baseModel import EshopBaseModel, camp_db
 from logistic_predict.predict.many_label1_predict.make_many_label1_analysis import  predict_leave
+from logistic_predict.predict.no_weight_many_label1_predict.no_weight_make_many_label1_analysis import no_weight_predict_leave
 
 class RawModel(EshopBaseModel):
     rawID = IntegerField()
 
+
+# 提取减脂营没有结营的所有营
 def get_not_over_TermID():
-    #[{'termID': 261, 'term_num': 114, 'predict_day': 22, 'camp_start_time':___}, ,,]
+    #[{'termID': 261, 'term_num': 114,'camp_start_time':___ , 'predict_day': 22 }, ,,]
     #predict_day 就是需要预测的天数
     not_over_term_list = []
 
@@ -27,7 +35,8 @@ def get_not_over_TermID():
         FROM eshop.TB_TERM term
         WHERE date_add(term.CAMP_START_TIME, INTERVAL term.DAYS DAY) > now()
               and term.CAMP_START_TIME < now()
-        AND term.TYPE = 1
+              and datediff(now(),term.CAMP_START_TIME ) > 0
+              AND term.TYPE = 1
 ''')
 
     for r in record:
@@ -35,6 +44,7 @@ def get_not_over_TermID():
         r_dic['termID'] = r.termID
         r_dic['term_num'] = r.term_num
         r_dic['camp_start_time'] = str(r.start_time)
+        r_dic['leave_time'] = str(r.now)
         r_dic['predict_day'] = r.predict_day
 
         not_over_term_list.append(r_dic)
@@ -42,11 +52,12 @@ def get_not_over_TermID():
     if not camp_db.is_closed():
         camp_db.close()
 
-
     return not_over_term_list
 
 
-#[{'termID': 261, 'term_num': 114, 'predict_day': 22}, {'termID': 265, 'term_num': 115, 'predict_day': 15}, {'termID': 268, 'term_num': 116, 'predict_day': 8}, {'termID': 274, 'term_num': 117, 'predict_day': 1}]
+
+# 根据没结营的减脂营 ，提取每个营开营前记录体重的学员
+# not_over_term_list = [{'termID': 261, 'term_num': 114, 'predict_day': 22}, {'termID': 265, 'term_num': 115, 'predict_day': 15}, {'termID': 268, 'term_num': 116, 'predict_day': 8}, {'termID': 274, 'term_num': 117, 'predict_day': 1}]
 def get_day_weight(not_over_term_list):
     if camp_db.is_closed():
         camp_db.connect()
@@ -54,11 +65,12 @@ def get_day_weight(not_over_term_list):
     for term_num_dic in not_over_term_list:
         term_num_dic['predict_data'] = []
 
-        record = RawModel.raw('''
-        select
+        record = RawModel.raw('''        
+select
   sub2.ai id,
   sub2.tn xueQi,
   sub2.n  mingZi,
+  sub2.mo shouji,
   sub2.ag nianLing,
   sub2.gd xingBie,
   sub2.w0h shenGao,
@@ -228,6 +240,7 @@ from(
     sub.term_num tn,
     sub.name   n,
     sub.apply_id ai,
+    sub.mobile   mo,
     sub.age      ag,
     sub.gender   gd,
     sub.week0Height w0h,
@@ -243,6 +256,7 @@ from(
            term.TERM_NUM                                  term_num,
            apply.NAME                                     name,
            wr.apply_id                                    apply_id,
+           apply.MOBILE                                   mobile,
            apply.AGE age,
            case apply.GENDER
            when 'f'
@@ -259,7 +273,7 @@ from(
          from tb_weight_record wr
            left join TB_APPLY_RECORD apply on apply.APPLY_ID = wr.APPLY_ID
            LEFT JOIN TB_TERM term ON term.TERM_ID = apply.TERM_ID
-           left join (select
+           inner join (select
                         body.apply_id,
                         max(
                             case body.WEEK
@@ -281,7 +295,6 @@ from(
                      ) sub_body on apply.APPLY_ID = sub_body.APPLY_ID
            LEFT JOIN TB_ORDER tborder ON apply.PACKAGE_ORDER_ID = tborder.ORDER_ID
            WHERE tborder.OUTER_ORIGIN != 'exchange_white_list_test'
-               and DATEDIFF(wr.create_time, term.CAMP_START_TIME) >= 0
                and  term.TERM_NUM = %s
 
          order by wr.apply_id, wr.create_time desc
@@ -290,7 +303,6 @@ from(
     )sub2
 group by sub2.ai
 order by sub2.tn
-
         ''', term_num_dic['term_num'])
 
         for r in record:
@@ -298,6 +310,7 @@ order by sub2.tn
             r_dic['apply_Id'] = r.id
             r_dic['term_num'] = r.xueQi
             r_dic['name'] = r.mingZi
+            r_dic['phone'] = str(r.shouji)
             r_dic['age'] = r.nianLing
             r_dic['gender'] = r.xingBie
             r_dic['week0Height']= r.shenGao
@@ -339,6 +352,50 @@ order by sub2.tn
     return not_over_term_list
 
 
+
+# 根据没结营的减脂营 ，提取每个营对应applyID
+def get_day_all_applyID(not_over_term_list):
+    if camp_db.is_closed():
+        camp_db.connect()
+
+    for term_num_dic in not_over_term_list:
+        term_num_dic['predict_data'] = []
+
+        record = RawModel.raw('''
+        select
+  apply.APPLY_ID apply_Id,
+  term.TERM_NUM term_num,
+  apply.NAME name,
+  apply.MOBILE                                   mobile,
+  apply.AGE age,
+  apply.GENDER gender
+
+from TB_APPLY_RECORD apply
+  LEFT JOIN TB_TERM term ON term.TERM_ID = apply.TERM_ID
+  LEFT JOIN TB_ORDER tborder ON apply.PACKAGE_ORDER_ID = tborder.ORDER_ID
+WHERE tborder.OUTER_ORIGIN != 'exchange_white_list_test'
+      and term.TERM_NUM = %s
+        ''', term_num_dic['term_num'])
+
+        for r in record:
+            r_dic = {}
+            r_dic['apply_Id'] = r.apply_Id
+            r_dic['term_num'] = r.term_num
+            r_dic['name'] = r.name
+            r_dic['phone'] = str(r.mobile)
+            r_dic['age'] = r.age
+            r_dic['gender'] = r.gender
+
+            term_num_dic['predict_data'].append(r_dic)
+
+    if not camp_db.is_closed():
+        camp_db.close()
+
+    return not_over_term_list
+
+
+
+# 提取所有未结营的打卡信息
 def get_day_check():
     trainDatas = []
 
@@ -1428,6 +1485,9 @@ group by sub.APPLY_ID
 
     return trainDatas
 
+
+
+# 提取所有未结营的说话信息
 def get_day_speak():
     trainDatas = []
     if camp_db.is_closed():
@@ -2307,6 +2367,8 @@ group by apply_Id
     return trainDatas
 
 
+
+#用applyID 将打卡信息 ,说话信息 填充进 not_over_term_list(装体重的数据结构)
 def get_all_data(not_over_term_list , cl ,sl ):
     for term_num_dic in not_over_term_list:
         for person in term_num_dic['predict_data']:
@@ -2346,6 +2408,8 @@ def get_all_data(not_over_term_list , cl ,sl ):
     return not_over_term_list
 
 
+
+# 从前向后填充体重
 def add_null_weight(not_over_term_list):
     # not_over_term_list = [{'termID': 261, 'term_num': 114, 'predict_day': 22 , 'predict_data':[{'apply_Id':_ , 'term_num':_ ,}...]}, ,,]
     for term_num_dic in not_over_term_list:
@@ -2359,6 +2423,8 @@ def add_null_weight(not_over_term_list):
                     last_record_weight = person['day%dWeight'%time]
 
     return not_over_term_list
+
+
 
 def show(not_over_term_list , predict0_list):
     predict_dic = {}
@@ -2385,6 +2451,7 @@ def show(not_over_term_list , predict0_list):
 
 
 
+#写exel
 #[{'term': 114, 'name': '马超', 'day': 22}, {'term': 114, 'name': '郭佳仪', 'day': 22}, {'term': 114, 'name': '祖朋', 'day': 22}, {'term': 114, 'name': '肖迪', 'day': 22}, {'term': 114, 'name': '大兵', 'day': 22}, {'term': 114, 'name': '黄凡', 'day': 22}, {'term': 114, 'name': '冯姣', 'day': 22}, {'term': 114, 'name': '杨义飞', 'day': 22}, {'term': 114, 'name': '杨玙', 'day': 22}, {'term': 114, 'name': '安大人', 'day': 22}, {'term': 114, 'name': '潘灯', 'day': 22}, {'term': 114, 'name': '高琳', 'day': 22}, {'term': 114, 'name': '贾祯祯', 'day': 22}, {'term': 114, 'name': '邢扬和', 'day': 22}, {'term': 114, 'name': '袁颖', 'day': 22}, {'term': 114, 'name': '徐凯', 'day': 22}, {'term': 114, 'name': '王姝妍', 'day': 22}, {'term': 114, 'name': '程惠娟', 'day': 22}, {'term': 114, 'name': '谢智文', 'day': 22}, {'term': 114, 'name': '耿聪', 'day': 22}, {'term': 114, 'name': '三米', 'day': 22}, {'term': 114, 'name': '杨远屏', 'day': 22}, {'term': 114, 'name': '李佳欣', 'day': 22}, {'term': 114, 'name': '谢丽', 'day': 22}, {'term': 114, 'name': '萧琳琳', 'day': 22}, {'term': 114, 'name': '张莹', 'day': 22}, {'term': 114, 'name': '彭捷才', 'day': 22}, {'term': 114, 'name': '张放', 'day': 22}, {'term': 114, 'name': '金一帆', 'day': 22}, {'term': 114, 'name': '迟小宝', 'day': 22}, {'term': 114, 'name': '张国正', 'day': 22}, {'term': 114, 'name': '邓洁星', 'day': 22}, {'term': 114, 'name': '高阳雪', 'day': 22}, {'term': 114, 'name': '郭思明', 'day': 22}, {'term': 114, 'name': '陆青峰', 'day': 22}, {'term': 114, 'name': '戴倩媛', 'day': 22}, {'term': 115, 'name': '高家林', 'day': 15}, {'term': 115, 'name': '蔡洵', 'day': 15}, {'term': 115, 'name': '朱子涵', 'day': 15}, {'term': 115, 'name': '米奇', 'day': 15}, {'term': 115, 'name': '单丹丹', 'day': 15}, {'term': 115, 'name': '林琪琪', 'day': 15}, {'term': 115, 'name': '樊宇芳', 'day': 15}, {'term': 115, 'name': '华丹', 'day': 15}, {'term': 115, 'name': '胡霜颖', 'day': 15}, {'term': 116, 'name': '刘瑞琦', 'day': 8}, {'term': 116, 'name': '陈欣欣', 'day': 8}, {'term': 116, 'name': '王萌', 'day': 8}, {'term': 116, 'name': '任雨', 'day': 8}, {'term': 116, 'name': '张河', 'day': 8}, {'term': 116, 'name': '黄婷', 'day': 8}, {'term': 116, 'name': '黄蕗颖', 'day': 8}, {'term': 116, 'name': 'Aaliyah', 'day': 8}, {'term': 116, 'name': '孙永妍', 'day': 8}, {'term': 116, 'name': '赵马一', 'day': 8}, {'term': 116, 'name': '陈瑞珊', 'day': 8}, {'term': 117, 'name': '赵七七', 'day': 1}, {'term': 117, 'name': '程阳', 'day': 1}, {'term': 117, 'name': '李楠', 'day': 1}]
 def make_xls_file(predict0_list):
     date_now = time.strftime('%Y-%m-%d', time.localtime())
@@ -2410,33 +2477,354 @@ def make_xls_file(predict0_list):
 
 
 
+#[{'term': 114, 'name': '马超', 'day': 22}, {'term': 114, 'name': '郭佳仪', 'day': 22}, {'term': 114, 'name': '祖朋', 'day': 22}, {'term': 114, 'name': '肖迪', 'day': 22}, {'term': 114, 'name': '大兵', 'day': 22}, {'term': 114, 'name': '黄凡', 'day': 22}, {'term': 114, 'name': '冯姣', 'day': 22}, {'term': 114, 'name': '杨义飞', 'day': 22}, {'term': 114, 'name': '杨玙', 'day': 22}, {'term': 114, 'name': '安大人', 'day': 22}, {'term': 114, 'name': '潘灯', 'day': 22}, {'term': 114, 'name': '高琳', 'day': 22}, {'term': 114, 'name': '贾祯祯', 'day': 22}, {'term': 114, 'name': '邢扬和', 'day': 22}, {'term': 114, 'name': '袁颖', 'day': 22}, {'term': 114, 'name': '徐凯', 'day': 22}, {'term': 114, 'name': '王姝妍', 'day': 22}, {'term': 114, 'name': '程惠娟', 'day': 22}, {'term': 114, 'name': '谢智文', 'day': 22}, {'term': 114, 'name': '耿聪', 'day': 22}, {'term': 114, 'name': '三米', 'day': 22}, {'term': 114, 'name': '杨远屏', 'day': 22}, {'term': 114, 'name': '李佳欣', 'day': 22}, {'term': 114, 'name': '谢丽', 'day': 22}, {'term': 114, 'name': '萧琳琳', 'day': 22}, {'term': 114, 'name': '张莹', 'day': 22}, {'term': 114, 'name': '彭捷才', 'day': 22}, {'term': 114, 'name': '张放', 'day': 22}, {'term': 114, 'name': '金一帆', 'day': 22}, {'term': 114, 'name': '迟小宝', 'day': 22}, {'term': 114, 'name': '张国正', 'day': 22}, {'term': 114, 'name': '邓洁星', 'day': 22}, {'term': 114, 'name': '高阳雪', 'day': 22}, {'term': 114, 'name': '郭思明', 'day': 22}, {'term': 114, 'name': '陆青峰', 'day': 22}, {'term': 114, 'name': '戴倩媛', 'day': 22}, {'term': 115, 'name': '高家林', 'day': 15}, {'term': 115, 'name': '蔡洵', 'day': 15}, {'term': 115, 'name': '朱子涵', 'day': 15}, {'term': 115, 'name': '米奇', 'day': 15}, {'term': 115, 'name': '单丹丹', 'day': 15}, {'term': 115, 'name': '林琪琪', 'day': 15}, {'term': 115, 'name': '樊宇芳', 'day': 15}, {'term': 115, 'name': '华丹', 'day': 15}, {'term': 115, 'name': '胡霜颖', 'day': 15}, {'term': 116, 'name': '刘瑞琦', 'day': 8}, {'term': 116, 'name': '陈欣欣', 'day': 8}, {'term': 116, 'name': '王萌', 'day': 8}, {'term': 116, 'name': '任雨', 'day': 8}, {'term': 116, 'name': '张河', 'day': 8}, {'term': 116, 'name': '黄婷', 'day': 8}, {'term': 116, 'name': '黄蕗颖', 'day': 8}, {'term': 116, 'name': 'Aaliyah', 'day': 8}, {'term': 116, 'name': '孙永妍', 'day': 8}, {'term': 116, 'name': '赵马一', 'day': 8}, {'term': 116, 'name': '陈瑞珊', 'day': 8}, {'term': 117, 'name': '赵七七', 'day': 1}, {'term': 117, 'name': '程阳', 'day': 1}, {'term': 117, 'name': '李楠', 'day': 1}]
+def make_xls_file_with_all_message(predict0_list, file_type):
+    date_now = time.strftime('%Y-%m-%d', time.localtime())
 
+    file = Workbook(encoding='utf-8')
+    table = file.add_sheet('data')
+
+    data_list = [['学期','姓名','手机','开营时间','要跑的日期','用1-n天数据预测','待的时间']]
+
+    for day in range(1, 27):
+        data_list[0].append('第%d天体重' % day)
+        data_list[0].append('第%d天早餐' % day)
+        data_list[0].append('第%d天午餐' % day)
+        data_list[0].append('第%d天晚餐' % day)
+        data_list[0].append('第%d天运动' % day)
+        data_list[0].append('第%d天说话' % day)
+        data_list[0].append('第%d天说馋次数' % day)
+        data_list[0].append('第%d天说压力次数' % day)
+        data_list[0].append('第%d天说月经次数' % day)
+
+    for person in predict0_list:
+        data = []
+        for k , v in person.items():
+            if k == 'day':
+                data.append(date_now)
+            data.append(v)
+        data_list.append(data)
+
+
+    for i, p in enumerate(data_list):
+        for j, q in enumerate(p):
+            table.write(i, j, q)
+
+    if file_type == 'predict':
+        file.save('./every_day_result/预测要跑.xls')
+    elif file_type == 'already_leave':
+        file.save('./every_day_result/已经跑了.xls')
+
+    return
+
+
+def no_weight_make_xls_file_with_all_message(no_weight_predict0_list):
+    date_now = time.strftime('%Y-%m-%d', time.localtime())
+
+    file = Workbook(encoding='utf-8')
+    table = file.add_sheet('data2')
+
+    data_list = [['学期','姓名','手机','开营时间','要跑的日期','用1-n天数据预测','待的时间']]
+
+    for day in range(1, 27):
+        data_list[0].append('第%d天早餐' % day)
+        data_list[0].append('第%d天午餐' % day)
+        data_list[0].append('第%d天晚餐' % day)
+        data_list[0].append('第%d天运动' % day)
+        data_list[0].append('第%d天说话' % day)
+        data_list[0].append('第%d天说馋次数' % day)
+        data_list[0].append('第%d天说压力次数' % day)
+        data_list[0].append('第%d天说月经次数' % day)
+
+    for person in no_weight_predict0_list:
+        data = []
+        for k , v in person.items():
+            if k == 'day':
+                data.append(date_now)
+            data.append(v)
+        data_list.append(data)
+
+
+    for i, p in enumerate(data_list):
+        for j, q in enumerate(p):
+            table.write(i, j, q)
+    file.save('./every_day_result/无体重名单.xls')
+
+    return
+
+
+# 拿到这个人最后有活动的天数
+def get_last_stay_time(person_dic, day_len):
+    day_check_speak_list = []
+    day_weight_list = [person_dic['week0Weight']]
+
+    for time in range(1, day_len+1):
+        day_check = person_dic['breakfast%d'%time] +person_dic['lunch%d'%time]+person_dic['dinner%d'%time]+person_dic['trainning%d'%time]+ person_dic['speak%d'%time]
+        # day_check = person_dic['breakfast%d'%time] +person_dic['lunch%d'%time]+person_dic['dinner%d'%time]+person_dic['trainning%d'%time]
+
+        day_check_speak_list.append(day_check)
+        day_weight_list.append(person_dic['day%dWeight'%time])
+
+
+    sum_not_check_speak_time = 0
+    for i in range(len(day_check_speak_list)-1, -1 , -1):
+        if day_check_speak_list[i] == 0:
+            sum_not_check_speak_time += 1
+        else:
+            break
+
+    # check_speak_stay_time = 这人打卡持续的天数
+    check_speak_stay_time = day_len - sum_not_check_speak_time
+
+
+
+    last_day_weight = person_dic['day%dWeight'%day_len]
+    sum_weight_not_change = 1
+    for i in range(len(day_weight_list)-2 , -1, -1):
+        if day_weight_list[i] == last_day_weight:
+            sum_weight_not_change += 1
+        else:
+            break
+
+    # weight_stay_time = 这人记录体重持续的天数
+    if sum_weight_not_change > day_len:
+        weight_stay_time = 0
+    else:
+        weight_stay_time = day_len - sum_weight_not_change + 1
+
+
+    person_real_stay_time = 0
+    if weight_stay_time >= check_speak_stay_time:
+        return weight_stay_time
+    else:
+        return check_speak_stay_time
+
+
+
+# 拿到这个人最后有活动的天数
+def no_weight_get_last_stay_time(person_dic, day_len):
+    day_check_speak_list = []
+
+    for time in range(1, day_len+1):
+        day_check = person_dic['breakfast%d'%time] +person_dic['lunch%d'%time]+person_dic['dinner%d'%time]+person_dic['trainning%d'%time]+ person_dic['speak%d'%time]
+        #day_check = person_dic['breakfast%d'%time] +person_dic['lunch%d'%time]+person_dic['dinner%d'%time]+person_dic['trainning%d'%time]
+
+        day_check_speak_list.append(day_check)
+
+
+    sum_not_check_speak_time = 0
+    for i in range(len(day_check_speak_list)-1, -1 , -1):
+        if day_check_speak_list[i] == 0:
+            sum_not_check_speak_time += 1
+        else:
+            break
+
+    # check_speak_stay_time = 这人打卡持续的天数
+    check_speak_stay_time = day_len - sum_not_check_speak_time
+
+    return check_speak_stay_time
+
+
+
+# 移除在预测之前已经离开的人 ，并将他们以字典形式 ，写入一个列表
+def cut_already_leave_person_before_predict(not_over_term_list):
+    already_leave_list = []
+
+    for term_num_dic in not_over_term_list:
+        # print(term_num_dic['term_num'],'期 =',len(term_num_dic['predict_data']),'人')
+        day_len = term_num_dic['predict_day']
+        term_already_leave_list = []
+
+        feature_map = []
+        for day in range(1, day_len + 1):
+            feature_map.append('day%dWeight' % day)
+            feature_map.append('breakfast%d' % day)
+            feature_map.append('lunch%d' % day)
+            feature_map.append('dinner%d' % day)
+            feature_map.append('trainning%d' % day)
+            feature_map.append('speak%d' % day)
+            feature_map.append('greed%d' % day)
+            feature_map.append('pressure%d' % day)
+            feature_map.append('menstrual%d' % day)
+
+        remove_id_list = []
+        for person in term_num_dic['predict_data']:
+
+            day_len = term_num_dic['predict_day']
+            person_real_stay_time = get_last_stay_time(person, day_len)
+            if person_real_stay_time < day_len:
+                person_dic = {}
+                person_dic['term'] = person['term_num']
+                person_dic['name'] = person['name']
+                person_dic['phone'] = person['phone']
+                person_dic['camp_start_time'] = term_num_dic['camp_start_time']
+                person_dic['day'] = term_num_dic['predict_day']
+                person_dic['stay_day'] = person_real_stay_time
+
+                for feature in feature_map:
+                    person_dic[feature] = person[feature]
+
+                term_already_leave_list.append(person_dic)
+                remove_id_list.append(person['apply_Id'])
+
+
+
+        for id in remove_id_list:
+            for person in term_num_dic['predict_data']:
+                if id == person['apply_Id']:
+                    term_num_dic['predict_data'].remove(person)
+                    break
+
+
+
+
+
+        # print(len(term_already_leave_list))
+        # print(term_num_dic['term_num'],'期 =',len(term_num_dic['predict_data']),'人')
+
+
+        # 对term_already_leave_list 'stay_day' 升序排序
+        term_already_leave_list = sorted(term_already_leave_list, key=operator.itemgetter('stay_day'), reverse=1)
+        already_leave_list.extend(term_already_leave_list)
+
+
+    return already_leave_list , not_over_term_list
+
+
+# (无体重版本) 移除在预测之前已经离开的人 ，并将他们以字典形式 ，写入一个列表
+def no_weight_cut_already_leave_person_before_predict(no_weight_not_over_term_list):
+    already_leave_list = []
+
+    for term_num_dic in no_weight_not_over_term_list:
+        # print(term_num_dic['term_num'],'期 =',len(term_num_dic['predict_data']),'人')
+        day_len = term_num_dic['predict_day']
+        term_already_leave_list = []
+
+        feature_map = []
+        for day in range(1, day_len + 1):
+            feature_map.append('breakfast%d' % day)
+            feature_map.append('lunch%d' % day)
+            feature_map.append('dinner%d' % day)
+            feature_map.append('trainning%d' % day)
+            feature_map.append('speak%d' % day)
+            feature_map.append('greed%d' % day)
+            feature_map.append('pressure%d' % day)
+            feature_map.append('menstrual%d' % day)
+
+        remove_id_list = []
+        for person in term_num_dic['predict_data']:
+
+            day_len = term_num_dic['predict_day']
+            person_real_stay_time = no_weight_get_last_stay_time(person, day_len)
+            if person_real_stay_time < day_len:
+                person_dic = {}
+                person_dic['term'] = person['term_num']
+                person_dic['name'] = person['name']
+                person_dic['phone'] = person['phone']
+                person_dic['camp_start_time'] = term_num_dic['camp_start_time']
+                person_dic['day'] = term_num_dic['predict_day']
+                person_dic['stay_day'] = person_real_stay_time
+
+                for feature in feature_map:
+                    person_dic[feature] = person[feature]
+
+                term_already_leave_list.append(person_dic)
+                remove_id_list.append(person['apply_Id'])
+
+
+
+        for id in remove_id_list:
+            for person in term_num_dic['predict_data']:
+                if id == person['apply_Id']:
+                    term_num_dic['predict_data'].remove(person)
+                    break
+
+
+        # print(len(term_already_leave_list))
+        # print(term_num_dic['term_num'],'期 =',len(term_num_dic['predict_data']),'人')
+
+
+        # 对term_already_leave_list 'stay_day' 升序排序
+        term_already_leave_list = sorted(term_already_leave_list, key=operator.itemgetter('stay_day'), reverse=1)
+        already_leave_list.extend(term_already_leave_list)
+
+
+    return already_leave_list , no_weight_not_over_term_list
+
+
+# 从 no_weight_not_over_term_list(所有applyID)  删除  not_over_term_list(有体重的applyID) 中有体重的人
+def remove_weight_person(no_weight_not_over_term_list, not_over_term_list):
+    #no_weight_not_over_term_list 此时是全applyID
+    #not_over_term_list  有体重的applyID
+
+    for no_weight_term in no_weight_not_over_term_list:
+        term_num = no_weight_term['term_num']
+
+        remove_id_list = []
+        for weight_term in not_over_term_list:
+            if weight_term['term_num'] == term_num:
+                for person in weight_term['predict_data']:
+                    remove_id_list.append(person['apply_Id'])
+
+        for id in remove_id_list:
+            for no_weight_person in no_weight_term['predict_data']:
+                if id == no_weight_person['apply_Id']:
+                    no_weight_term['predict_data'].remove(no_weight_person)
+                    break
+
+    return no_weight_not_over_term_list
+
+
+
+
+# 每天运行这个函数去拉减脂营在营的数据进行预测和统计
 def every_day_run_predict():
+    # not_over_term_list = [{'termID': 261, 'term_num': 114, 'camp_start_time': '2018-07-23 00:00:00', 'leave_time': '2018-08-18 16:19:11', 'predict_day': 26, },{},,,]
     not_over_term_list = get_not_over_TermID()
-    not_over_term_list = get_day_weight(not_over_term_list)
-    # print(not_over_term_list)
 
+    #存开局无体重的人
+    no_weight_not_over_term_list = get_not_over_TermID()
+    no_weight_not_over_term_list = get_day_all_applyID(no_weight_not_over_term_list)
+
+    not_over_term_list = get_day_weight(not_over_term_list)
+
+    #从 no_weight_not_over_term_list  删除  not_over_term_list 中有体重的人
+    no_weight_not_over_term_list = remove_weight_person(no_weight_not_over_term_list, not_over_term_list)
 
     day_check_list = get_day_check()
-    # print(day_check_list[1])
 
     day_speak_list = get_day_speak()
 
     #[{'termID': 261, 'term_num': 114, 'predict_day': 22 , 'predict_data':[{'apply_Id':_ , 'term_num':_ ,}...]}, ,,]
     not_over_term_list = get_all_data(not_over_term_list,day_check_list , day_speak_list)
+    no_weight_not_over_term_list = get_all_data(no_weight_not_over_term_list, day_check_list , day_speak_list)
 
-
-    # print(not_over_term_list)
     not_over_term_list = add_null_weight(not_over_term_list)
     # print(not_over_term_list[0]['predict_data'][0])
 
-    # predict0_list =[{'term_num':_ , 'name':_}, ,,]
-    print('开始预测')
-    predict0_list = predict_leave(not_over_term_list)
-    print(predict0_list)
 
-    # show(not_over_term_list, predict0_list)
-    make_xls_file(predict0_list)
+
+    # 把以前走的人从 not_over_term_list 移 到already_leave_list , 最后一天有行动的留在 not_over_term_list 进行预测
+    already_leave_list, not_over_term_list = cut_already_leave_person_before_predict(not_over_term_list)
+    no_weight_already_leave_list, no_weight_not_over_term_list = no_weight_cut_already_leave_person_before_predict(no_weight_not_over_term_list)
+
+
+    # predict0_list =[{'term_num':_ , 'name':_}, ,,]
+    print('开始预测有体重')
+    # 1000个逻辑回归预测
+    predict0_list = predict_leave(not_over_term_list)
+    make_xls_file_with_all_message(predict0_list, file_type = 'predict')
+    make_xls_file_with_all_message(already_leave_list, file_type = 'already_leave')
+    print('有体重 预测完毕')
+
+
+    print('开始预测无体重')
+    no_weight_predict0_list = no_weight_predict_leave(no_weight_not_over_term_list)
+    no_weight_predict0_list.extend(no_weight_already_leave_list)
+    no_weight_make_xls_file_with_all_message(no_weight_predict0_list)
+    print('无体重 预测完毕')
+
+
 
 
 if __name__ == '__main__':
