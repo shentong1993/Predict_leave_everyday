@@ -29,7 +29,7 @@ def processData(filePath):
 
 # 生成最后一个标签(label)是1的位置
 def add_lastlasbel1():
-    data_list = processData('./data/add_null_weight.csv')
+    data_list = processData('./data/weight_dataset/add_null_weight.csv')
 
     run_day_list = []
     for person in data_list:
@@ -53,7 +53,7 @@ def add_lastlasbel1():
 
         person['lastLabel1'] = (27 - last_day_leave)
 
-    with open("./data/add_lastLabel1.csv", "w+", encoding='utf8') as csvfile:
+    with open("./data/weight_dataset/add_lastLabel1.csv", "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
 
@@ -730,7 +730,7 @@ def add_lastlasbel1():
 
 # 无体重 生成最后一个标签是1的位置
 def no_weight_add_lastlasbel1():
-    data_list = processData('./no_weight_data/labelAll.csv')
+    data_list = processData('./data/no_weight_dataset/labelAll.csv')
     print(len(data_list))
 
     run_day_list = []
@@ -755,7 +755,7 @@ def no_weight_add_lastlasbel1():
 
         person['lastLabel1'] = (27 - last_day_leave)
 
-    with open("./no_weight_data/add_lastLabel1.csv", "w+", encoding='utf8') as csvfile:
+    with open("./data/no_weight_dataset/add_lastLabel1.csv", "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
 

@@ -30,11 +30,9 @@ def processData(filePath):
 
 # 洗数据
 def wash():
-    # /Users/shen/PycharmProjects/Predict_leave/data/trainData.csv
-    data_list = processData('./data/trainData.csv')
+    #  data/weight_dataset
+    data_list = processData('./data/weight_dataset/trainData.csv')
 
-    # print(len(data_list))
-    # print(data_list)
 
     speak_num_list = []
     not_zero = 0
@@ -153,7 +151,7 @@ def wash():
 
     # plt.show()
 
-    with open("./data/w.csv", "w+", encoding='utf8') as csvfile:
+    with open("./data/weight_dataset/w.csv", "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
 
@@ -704,4 +702,3 @@ def wash():
                 i['menstrual28']
             ])
 
-# wash()

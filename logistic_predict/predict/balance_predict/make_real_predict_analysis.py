@@ -284,7 +284,8 @@ if __name__ == '__main__':
         print('day = ',day_len)
         # data_list = processData('../../train_data/train_data_with_lastLabel/%dday_data.csv'%day_len)
         #/Users/shen/PycharmProjects/Predict_leave/data/train_data_with_lastLabel/1day_data.csv
-        file_path = '../../../data/train_data_with_lastLabel/%dday_data.csv'%day_len
+        file_path = '../../../data/weight_dataset/train_data_with_lastLabel/%dday_data.csv'%day_len
+
         trainDatas, trainLabels = generate_data_and_label(file_path, day_len)
 
         #使正样本和负样本同样多

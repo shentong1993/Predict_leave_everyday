@@ -2491,9 +2491,9 @@ def make_xls_file_with_all_message(predict0_list, file_type):
             table.write(i, j, q)
 
     if file_type == 'predict':
-        file.save('./every_day_result/预测要跑.xls')
+        file.save('./data/every_day_result/预测要跑.xls')
     elif file_type == 'already_leave':
-        file.save('./every_day_result/已经跑了.xls')
+        file.save('./data/every_day_result/已经跑了.xls')
 
     return
 
@@ -2528,7 +2528,7 @@ def no_weight_make_xls_file_with_all_message(no_weight_predict0_list):
     for i, p in enumerate(data_list):
         for j, q in enumerate(p):
             table.write(i, j, q)
-    file.save('./every_day_result/无体重名单.xls')
+    file.save('./data/every_day_result/无体重名单.xls')
 
     return
 

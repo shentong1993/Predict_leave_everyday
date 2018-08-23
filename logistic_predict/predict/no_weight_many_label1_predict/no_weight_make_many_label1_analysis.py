@@ -405,8 +405,7 @@ def no_weight_predict_leave(no_weight_not_over_term_list):
                 feature_map.append('menstrual%d' % day)
 
             day = day_len
-            #/Users/shen/PycharmProjects/Predict_leave/no_weight_data/no_weight_train_data_with_lastLabel/1day_data.csv
-            file_path = './no_weight_data/no_weight_train_data_with_lastLabel/%dday_data.csv'%day
+            file_path = './data/no_weight_dataset/no_weight_train_data_with_lastLabel/%dday_data.csv'%day
             trainDatas, trainLabels = generate_data_and_label(file_path,day_len=day)
             total_train_Datas_List, total_train_Labels_List = generate_balance_data(trainDatas, trainLabels,day,num_of_label1_list=1000)
 
@@ -424,8 +423,6 @@ def no_weight_predict_leave(no_weight_not_over_term_list):
                 # predict_label = 0
 
                 if predict_label == 0:
-
-                    # print(person['name'])
 
                     predict_dic = {}
                     predict_dic['term'] = person['term_num']
@@ -455,8 +452,7 @@ if __name__ == '__main__':
     for day in day_list:
         print('day = ',day)
 
-        #/Users/shen/PycharmProjects/Predict_leave/no_weight_data/no_weight_train_data_with_lastLabel/1day_data.csv
-        file_path = '../../../no_weight_data/no_weight_train_data_with_lastLabel/%dday_data.csv'%day
+        file_path = './data/no_weight_dataset/no_weight_train_data_with_lastLabel/%dday_data.csv'%day
         trainDatas, trainLabels = generate_data_and_label(file_path,day_len=day)
         total_train_Datas_List, total_train_Labels_List = generate_balance_data(trainDatas, trainLabels,day,num_of_label1_list=3)
         # total_train_Datas_List = [  [[129,11,22..],[... ]] , []*9]

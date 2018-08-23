@@ -2127,8 +2127,8 @@ def get_all_data(wl , cl ,sl ):
 
 
 
-
-    with open("./data/trainData.csv", "w+", encoding='utf8') as csvfile:
+    #  /data/weight_dataset
+    with open("./data/weight_dataset/trainData.csv", "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
 
@@ -2726,9 +2726,8 @@ def get_all_no_weight_data(al , cl ,sl ):
                 break
 
 
-
-#/Users/shen/PycharmProjects/Predict_leave/no_weight_data
-    with open("./no_weight_data/trainData.csv", "w+", encoding='utf8') as csvfile:
+    # /data/no_weight_dataset
+    with open("./data/no_weight_dataset/trainData.csv", "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
 

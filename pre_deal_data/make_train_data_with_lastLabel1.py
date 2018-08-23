@@ -14729,8 +14729,8 @@ def no_weight_make_train_csv_for_day26(data_list ,file_path):
 # 有体重 生成从1-26天的时间段的训练数据
 def make_every_day_train_data():
 
-    data_list = processData('./data/add_lastLabel1.csv')
-    file_path = './data/train_data_with_lastLabel'
+    data_list = processData('./data/weight_dataset/add_lastLabel1.csv')
+    file_path = './data/weight_dataset/train_data_with_lastLabel'
 
 
     for daylen in range(1,27):
@@ -14800,8 +14800,8 @@ def make_every_day_train_data():
 # 无体重 生成从1-26天的时间段的训练数据
 def no_weight_make_every_day_train_data():
 
-    data_list = processData('./no_weight_data/add_lastLabel1.csv')
-    file_path = './no_weight_data/no_weight_train_data_with_lastLabel'
+    data_list = processData('./data/no_weight_dataset/add_lastLabel1.csv')
+    file_path = './data/no_weight_dataset/no_weight_train_data_with_lastLabel'
 
     for daylen in range(1, 27):
         person_label_list = no_weight_get_day_list(data_list, daylen)

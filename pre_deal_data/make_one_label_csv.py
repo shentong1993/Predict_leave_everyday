@@ -34,9 +34,7 @@ def processData(filePath):
 # 对每个人做标签 ,label1-27, 代表从第1-27天消失
 def getLabel():
 
-    data_list = []
-
-    data_list = processData('./data/w.csv')
+    data_list = processData('./data/weight_dataset/w.csv')
 
 
     for person in data_list:
@@ -71,7 +69,7 @@ def getLabel():
                 person['label%d' % (28 - Lastday - 1)] = 1
 
 
-    with open("./data/labelAll.csv", "w+", encoding='utf8') as csvfile:
+    with open("./data/weight_dataset/labelAll.csv", "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
 
@@ -683,8 +681,8 @@ def getLabel():
 # 生成无体重 label1-27 的1-0标签
 def no_weight_getLabel():
 
-    #/Users/shen/PycharmProjects/Predict_leave/no_weight_data/trainData.csv
-    data_list = processData('./no_weight_data/trainData.csv')
+    # /data/no_weight_dataset
+    data_list = processData('./data/no_weight_dataset/trainData.csv')
 
     for person in data_list:
         for Lastday in range(27):
@@ -707,7 +705,7 @@ def no_weight_getLabel():
                 person['label%d' % (28 - Lastday - 1)] = 1
 
     #/Users/shen/PycharmProjects/Predict_leave/no_weight_data
-    with open("./no_weight_data/labelAll.csv", "w+", encoding='utf8') as csvfile:
+    with open("./data/no_weight_dataset/labelAll.csv", "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
 
