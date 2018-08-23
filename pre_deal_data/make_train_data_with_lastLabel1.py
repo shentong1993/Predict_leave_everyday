@@ -26,106 +26,90 @@ def processData(filePath):
     return dataList
 
 
+def get_day_list(data_list ,daylen):
+    person_label_list = []
 
-def get_all_day_dict():
+    for person in data_list:
+        person_dic = {}
 
-    data_list = processData('./data/add_lastLabel1.csv')
-    #{ 1day : [{'label':0,...} ,{'label':1 ...},{}]   ,2day : [{},{}...], ... }
-    all_day_dic = {}
+        if person['lastLabel1'] >= (daylen - 1):
+            if person['lastLabel1'] == (daylen - 1):
+                # 用户 在 第daylen天 之后  跑了, 负样本
+                person_dic['label'] = 0
+            elif person['lastLabel1'] > (daylen - 1):
+                person_dic['label'] = 1
 
-    #一共提取 1-26天的 样本数据
-    for daylen in range(1,27):
-        person_label_list = []
+            person_dic['lastLabel1'] = person['lastLabel1']
+            person_dic['apply_Id'] = person['apply_Id']
+            person_dic['week0Weight'] = person['week0Weight']
+            person_dic['week0Height'] = person['week0Height']
+            person_dic['age'] = person['age']
+            person_dic['gender'] = person['gender']
 
-        for person in data_list:
-            person_dic = {}
+            for day in range(1, daylen + 1):
+                person_dic['day%dWeight' % day] = person['day%dWeight' % day]
+                person_dic['breakfast%d' % day] = person['breakfast%d' % day]
+                person_dic['lunch%d' % day] = person['lunch%d' % day]
+                person_dic['dinner%d' % day] = person['dinner%d' % day]
+                person_dic['trainning%d' % day] = person['trainning%d' % day]
+                person_dic['speak%d' % day] = person['speak%d' % day]
+                person_dic['greed%d' % day] = person['greed%d' % day]
+                person_dic['pressure%d' % day] = person['pressure%d' % day]
+                person_dic['menstrual%d' % day] = person['menstrual%d' % day]
 
-            if person['lastLabel1'] >= (daylen - 1):
-                if person['lastLabel1'] == (daylen - 1 ):
-                    #用户 在 第daylen天 之后  跑了, 负样本
-                    person_dic['label'] = 0
-                elif person['lastLabel1'] > (daylen - 1 ):
-                    person_dic['label'] = 1
+            person_label_list.append(person_dic)
 
-                person_dic['lastLabel1'] = person['lastLabel1']
-                person_dic['apply_Id'] = person['apply_Id']
-                person_dic['week0Weight'] = person['week0Weight']
-                person_dic['week0Height'] = person['week0Height']
-                person_dic['age'] = person['age']
-                person_dic['gender'] = person['gender']
+    print('over%d' % daylen)
 
-                for day in range(1 ,daylen +1):
-                    person_dic['day%dWeight'%day] = person['day%dWeight'%day]
-                    person_dic['breakfast%d'%day] = person['breakfast%d'%day]
-                    person_dic['lunch%d'%day] = person['lunch%d'%day]
-                    person_dic['dinner%d'%day] = person['dinner%d'%day]
-                    person_dic['trainning%d'%day] = person['trainning%d'%day]
-                    person_dic['speak%d'%day] = person['speak%d'%day]
-                    person_dic['greed%d'%day] = person['greed%d'%day]
-                    person_dic['pressure%d'%day] = person['pressure%d'%day]
-                    person_dic['menstrual%d'%day] = person['menstrual%d'%day]
-
-                person_label_list.append(person_dic)
-
-        all_day_dic['%dday'%daylen] = person_label_list
-        print('over%d'%daylen)
-
-    return all_day_dic
-
-
-
-def no_weight_get_all_day_dict():
-    #/Users/shen/PycharmProjects/Predict_leave/no_weight_data/add_lastLabel1.csv
-    data_list = processData('./no_weight_data/add_lastLabel1.csv')
-    #{ 1day : [{'label':0,...} ,{'label':1 ...},{}]   ,2day : [{},{}...], ... }
-    all_day_dic = {}
-
-    #一共提取 1-26天的 样本数据
-    for daylen in range(1,27):
-        person_label_list = []
-
-        for person in data_list:
-            person_dic = {}
-
-            if person['lastLabel1'] >= (daylen - 1):
-                if person['lastLabel1'] == (daylen - 1 ):
-                    #用户 在 第daylen天 之后  跑了, 负样本
-                    person_dic['label'] = 0
-                elif person['lastLabel1'] > (daylen - 1 ):
-                    person_dic['label'] = 1
-
-                person_dic['lastLabel1'] = person['lastLabel1']
-                #apply_Id,check1,check2,check3,check4,check5,check6,check7,check8,check9,check10,check11,check12,check13,check14,check15,check16,check17,check18,check19,check20,check21,check22,check23,check24,check25,check26,check27,check28,breakfast1,breakfast2,breakfast3,breakfast4,breakfast5,breakfast6,breakfast7,breakfast8,breakfast9,breakfast10,breakfast11,breakfast12,breakfast13,breakfast14,breakfast15,breakfast16,breakfast17,breakfast18,breakfast19,breakfast20,breakfast21,breakfast22,breakfast23,breakfast24,breakfast25,breakfast26,breakfast27,breakfast28,lunch1,lunch2,lunch3,lunch4,lunch5,lunch6,lunch7,lunch8,lunch9,lunch10,lunch11,lunch12,lunch13,lunch14,lunch15,lunch16,lunch17,lunch18,lunch19,lunch20,lunch21,lunch22,lunch23,lunch24,lunch25,lunch26,lunch27,lunch28,dinner1,dinner2,dinner3,dinner4,dinner5,dinner6,dinner7,dinner8,dinner9,dinner10,dinner11,dinner12,dinner13,dinner14,dinner15,dinner16,dinner17,dinner18,dinner19,dinner20,dinner21,dinner22,dinner23,dinner24,dinner25,dinner26,dinner27,dinner28,trainning1,trainning2,trainning3,trainning4,trainning5,trainning6,trainning7,trainning8,trainning9,trainning10,trainning11,trainning12,trainning13,trainning14,trainning15,trainning16,trainning17,trainning18,trainning19,trainning20,trainning21,trainning22,trainning23,trainning24,trainning25,trainning26,trainning27,trainning28,speak1,speak2,speak3,speak4,speak5,speak6,speak7,speak8,speak9,speak10,speak11,speak12,speak13,speak14,speak15,speak16,speak17,speak18,speak19,speak20,speak21,speak22,speak23,speak24,speak25,speak26,speak27,speak28,greed1,greed2,greed3,greed4,greed5,greed6,greed7,greed8,greed9,greed10,greed11,greed12,greed13,greed14,greed15,greed16,greed17,greed18,greed19,greed20,greed21,greed22,greed23,greed24,greed25,greed26,greed27,greed28,pressure1,pressure2,pressure3,pressure4,pressure5,pressure6,pressure7,pressure8,pressure9,pressure10,pressure11,pressure12,pressure13,pressure14,pressure15,pressure16,pressure17,pressure18,pressure19,pressure20,pressure21,pressure22,pressure23,pressure24,pressure25,pressure26,pressure27,pressure28,menstrual1,menstrual2,menstrual3,menstrual4,menstrual5,menstrual6,menstrual7,menstrual8,menstrual9,menstrual10,menstrual11,menstrual12,menstrual13,menstrual14,menstrual15,menstrual16,menstrual17,menstrual18,menstrual19,menstrual20,menstrual21,menstrual22,menstrual23,menstrual24,menstrual25,menstrual26,menstrual27,menstrual28,label1,label2,label3,label4,label5,label6,label7,label8,label9,label10,label11,label12,label13,label14,label15,label16,label17,label18,label19,label20,label21,label22,label23,label24,label25,label26,label27,lastLabel1
-                person_dic['apply_Id'] = person['apply_Id']
-
-                for day in range(1 ,daylen +1):
-                    person_dic['breakfast%d'%day] = person['breakfast%d'%day]
-                    person_dic['lunch%d'%day] = person['lunch%d'%day]
-                    person_dic['dinner%d'%day] = person['dinner%d'%day]
-                    person_dic['trainning%d'%day] = person['trainning%d'%day]
-                    person_dic['speak%d'%day] = person['speak%d'%day]
-                    person_dic['greed%d'%day] = person['greed%d'%day]
-                    person_dic['pressure%d'%day] = person['pressure%d'%day]
-                    person_dic['menstrual%d'%day] = person['menstrual%d'%day]
-
-                person_label_list.append(person_dic)
-
-        all_day_dic['%dday'%daylen] = person_label_list
-        print('over%d'%daylen)
-
-    return all_day_dic
+    return person_label_list
 
 
 
 
-def make_train_csv(all_day_dic):
-    #{ 1day : [{'label':0,...} ,{'label':1 ...},{}]   ,2day : [{},{}...], ... }
-    file_path = './data/train_data_with_lastLabel'
+
+
+
+
+def no_weight_get_day_list(data_list ,daylen):
+    person_label_list = []
+
+    for person in data_list:
+        person_dic = {}
+
+        if person['lastLabel1'] >= (daylen - 1):
+            if person['lastLabel1'] == (daylen - 1):
+                # 用户 在 第daylen天 之后  跑了, 负样本
+                person_dic['label'] = 0
+            elif person['lastLabel1'] > (daylen - 1):
+                person_dic['label'] = 1
+
+            person_dic['lastLabel1'] = person['lastLabel1']
+            # apply_Id,check1,check2,check3,check4,check5,check6,check7,check8,check9,check10,check11,check12,check13,check14,check15,check16,check17,check18,check19,check20,check21,check22,check23,check24,check25,check26,check27,check28,breakfast1,breakfast2,breakfast3,breakfast4,breakfast5,breakfast6,breakfast7,breakfast8,breakfast9,breakfast10,breakfast11,breakfast12,breakfast13,breakfast14,breakfast15,breakfast16,breakfast17,breakfast18,breakfast19,breakfast20,breakfast21,breakfast22,breakfast23,breakfast24,breakfast25,breakfast26,breakfast27,breakfast28,lunch1,lunch2,lunch3,lunch4,lunch5,lunch6,lunch7,lunch8,lunch9,lunch10,lunch11,lunch12,lunch13,lunch14,lunch15,lunch16,lunch17,lunch18,lunch19,lunch20,lunch21,lunch22,lunch23,lunch24,lunch25,lunch26,lunch27,lunch28,dinner1,dinner2,dinner3,dinner4,dinner5,dinner6,dinner7,dinner8,dinner9,dinner10,dinner11,dinner12,dinner13,dinner14,dinner15,dinner16,dinner17,dinner18,dinner19,dinner20,dinner21,dinner22,dinner23,dinner24,dinner25,dinner26,dinner27,dinner28,trainning1,trainning2,trainning3,trainning4,trainning5,trainning6,trainning7,trainning8,trainning9,trainning10,trainning11,trainning12,trainning13,trainning14,trainning15,trainning16,trainning17,trainning18,trainning19,trainning20,trainning21,trainning22,trainning23,trainning24,trainning25,trainning26,trainning27,trainning28,speak1,speak2,speak3,speak4,speak5,speak6,speak7,speak8,speak9,speak10,speak11,speak12,speak13,speak14,speak15,speak16,speak17,speak18,speak19,speak20,speak21,speak22,speak23,speak24,speak25,speak26,speak27,speak28,greed1,greed2,greed3,greed4,greed5,greed6,greed7,greed8,greed9,greed10,greed11,greed12,greed13,greed14,greed15,greed16,greed17,greed18,greed19,greed20,greed21,greed22,greed23,greed24,greed25,greed26,greed27,greed28,pressure1,pressure2,pressure3,pressure4,pressure5,pressure6,pressure7,pressure8,pressure9,pressure10,pressure11,pressure12,pressure13,pressure14,pressure15,pressure16,pressure17,pressure18,pressure19,pressure20,pressure21,pressure22,pressure23,pressure24,pressure25,pressure26,pressure27,pressure28,menstrual1,menstrual2,menstrual3,menstrual4,menstrual5,menstrual6,menstrual7,menstrual8,menstrual9,menstrual10,menstrual11,menstrual12,menstrual13,menstrual14,menstrual15,menstrual16,menstrual17,menstrual18,menstrual19,menstrual20,menstrual21,menstrual22,menstrual23,menstrual24,menstrual25,menstrual26,menstrual27,menstrual28,label1,label2,label3,label4,label5,label6,label7,label8,label9,label10,label11,label12,label13,label14,label15,label16,label17,label18,label19,label20,label21,label22,label23,label24,label25,label26,label27,lastLabel1
+            person_dic['apply_Id'] = person['apply_Id']
+
+            for day in range(1, daylen + 1):
+                person_dic['breakfast%d' % day] = person['breakfast%d' % day]
+                person_dic['lunch%d' % day] = person['lunch%d' % day]
+                person_dic['dinner%d' % day] = person['dinner%d' % day]
+                person_dic['trainning%d' % day] = person['trainning%d' % day]
+                person_dic['speak%d' % day] = person['speak%d' % day]
+                person_dic['greed%d' % day] = person['greed%d' % day]
+                person_dic['pressure%d' % day] = person['pressure%d' % day]
+                person_dic['menstrual%d' % day] = person['menstrual%d' % day]
+
+            person_label_list.append(person_dic)
+
+    print('over%d' % daylen)
+
+    return person_label_list
+
+
+
+def make_train_csv_for_day1(data_list ,file_path):
 
     with open(os.path.join(file_path, '1day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['1day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -171,10 +155,12 @@ def make_train_csv(all_day_dic):
                 i['menstrual1']
             ])
 
+
+def make_train_csv_for_day2(data_list ,file_path):
+
     with open(os.path.join(file_path, '2day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['2day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -241,10 +227,11 @@ def make_train_csv(all_day_dic):
                 i['menstrual2']
             ])
 
+def make_train_csv_for_day3(data_list ,file_path):
+
     with open(os.path.join(file_path, '3day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['3day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -327,10 +314,11 @@ def make_train_csv(all_day_dic):
                 i['menstrual3']
             ])
 
+def make_train_csv_for_day4(data_list ,file_path):
+
     with open(os.path.join(file_path, '4day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['4day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -432,10 +420,12 @@ def make_train_csv(all_day_dic):
                 i['menstrual4']
             ])
 
+
+def make_train_csv_for_day5(data_list ,file_path):
+
     with open(os.path.join(file_path, '5day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['5day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -557,10 +547,10 @@ def make_train_csv(all_day_dic):
                 i['menstrual5']
             ])
 
+def make_train_csv_for_day6(data_list ,file_path):
     with open(os.path.join(file_path, '6day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['6day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -702,10 +692,11 @@ def make_train_csv(all_day_dic):
                 i['menstrual6']
             ])
 
+
+def make_train_csv_for_day7(data_list ,file_path):
     with open(os.path.join(file_path, '7day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['7day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -867,10 +858,10 @@ def make_train_csv(all_day_dic):
                 i['menstrual7'],
             ])
 
+def make_train_csv_for_day8(data_list ,file_path):
     with open(os.path.join(file_path, '8day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['8day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -1052,10 +1043,11 @@ def make_train_csv(all_day_dic):
                 i['menstrual8'],
             ])
 
+
+def make_train_csv_for_day9(data_list ,file_path):
     with open(os.path.join(file_path, '9day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['9day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -1259,11 +1251,12 @@ def make_train_csv(all_day_dic):
                 i['menstrual9'],
             ])
 
+
+def make_train_csv_for_day10(data_list ,file_path):
     with open(os.path.join(file_path, '10day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['10day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -1487,11 +1480,12 @@ def make_train_csv(all_day_dic):
             ])
 
 
+def make_train_csv_for_day11(data_list ,file_path):
+
     with open(os.path.join(file_path, '11day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['11day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -1733,11 +1727,13 @@ def make_train_csv(all_day_dic):
                 i['menstrual11'],
             ])
 
+
+def make_train_csv_for_day12(data_list ,file_path):
+
     with open(os.path.join(file_path, '12day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['12day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -2000,11 +1996,12 @@ def make_train_csv(all_day_dic):
             ])
 
 
+def make_train_csv_for_day13(data_list ,file_path):
+
     with open(os.path.join(file_path, '13day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['13day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -2287,11 +2284,12 @@ def make_train_csv(all_day_dic):
 
             ])
 
+
+def make_train_csv_for_day14(data_list ,file_path):
     with open(os.path.join(file_path, '14day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['14day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -2595,11 +2593,11 @@ def make_train_csv(all_day_dic):
 
             ])
 
+def make_train_csv_for_day15(data_list ,file_path):
     with open(os.path.join(file_path, '15day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['15day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -2923,11 +2921,12 @@ def make_train_csv(all_day_dic):
 
             ])
 
+
+def make_train_csv_for_day16(data_list ,file_path):
     with open(os.path.join(file_path, '16day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['16day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -3270,11 +3269,13 @@ def make_train_csv(all_day_dic):
 
             ])
 
+
+
+def make_train_csv_for_day17(data_list ,file_path):
     with open(os.path.join(file_path, '17day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['17day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -3637,11 +3638,13 @@ def make_train_csv(all_day_dic):
 
             ])
 
+
+def make_train_csv_for_day18(data_list ,file_path):
+
     with open(os.path.join(file_path, '18day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['18day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -4024,11 +4027,11 @@ def make_train_csv(all_day_dic):
 
             ])
 
+def make_train_csv_for_day19(data_list ,file_path):
     with open(os.path.join(file_path, '19day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['19day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -4433,11 +4436,11 @@ def make_train_csv(all_day_dic):
             ])
 
 
+def make_train_csv_for_day20(data_list ,file_path):
     with open(os.path.join(file_path, '20day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['20day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -4860,11 +4863,12 @@ def make_train_csv(all_day_dic):
 
             ])
 
+
+def make_train_csv_for_day21(data_list ,file_path):
     with open(os.path.join(file_path, '21day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['21day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -5307,11 +5311,12 @@ def make_train_csv(all_day_dic):
 
             ])
 
+
+def make_train_csv_for_day22(data_list ,file_path):
     with open(os.path.join(file_path, '22day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['22day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -5774,11 +5779,12 @@ def make_train_csv(all_day_dic):
 
             ])
 
+
+def make_train_csv_for_day23(data_list ,file_path):
     with open(os.path.join(file_path, '23day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['23day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -6262,11 +6268,12 @@ def make_train_csv(all_day_dic):
 
             ])
 
+
+def make_train_csv_for_day24(data_list ,file_path):
     with open(os.path.join(file_path, '24day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['24day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -6771,11 +6778,12 @@ def make_train_csv(all_day_dic):
 
             ])
 
+
+def make_train_csv_for_day25(data_list ,file_path):
     with open(os.path.join(file_path, '25day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['25day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -7300,11 +7308,11 @@ def make_train_csv(all_day_dic):
 
             ])
 
+def make_train_csv_for_day26(data_list ,file_path):
     with open(os.path.join(file_path, '26day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['26day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -7848,15 +7856,15 @@ def make_train_csv(all_day_dic):
 
             ])
 
-def no_weight_make_train_csv(all_day_dic):
-    #{ 1day : [{'label':0,...} ,{'label':1 ...},{}]   ,2day : [{},{}...], ... }
-    #/Users/shen/PycharmProjects/Predict_leave/no_weight_data/no_weight_train_data_with_lastLabel
-    file_path = './no_weight_data/no_weight_train_data_with_lastLabel'
+
+
+
+
+def no_weight_make_train_csv_for_day1(data_list ,file_path):
 
     with open(os.path.join(file_path, '1day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['1day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -7888,10 +7896,11 @@ def no_weight_make_train_csv(all_day_dic):
                 i['menstrual1']
             ])
 
+
+def no_weight_make_train_csv_for_day2(data_list ,file_path):
     with open(os.path.join(file_path, '2day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['2day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -7944,10 +7953,12 @@ def no_weight_make_train_csv(all_day_dic):
                 i['menstrual2']
             ])
 
+
+
+def no_weight_make_train_csv_for_day3(data_list ,file_path):
     with open(os.path.join(file_path, '3day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['3day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -8015,10 +8026,10 @@ def no_weight_make_train_csv(all_day_dic):
                 i['menstrual3']
             ])
 
+def no_weight_make_train_csv_for_day4(data_list ,file_path):
     with open(os.path.join(file_path, '4day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['4day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -8104,10 +8115,13 @@ def no_weight_make_train_csv(all_day_dic):
                 i['menstrual4']
             ])
 
+
+
+def no_weight_make_train_csv_for_day5(data_list ,file_path):
+
     with open(os.path.join(file_path, '5day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['5day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -8211,10 +8225,11 @@ def no_weight_make_train_csv(all_day_dic):
                 i['menstrual5']
             ])
 
+
+def no_weight_make_train_csv_for_day6(data_list ,file_path):
     with open(os.path.join(file_path, '6day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['6day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -8336,10 +8351,11 @@ def no_weight_make_train_csv(all_day_dic):
                 i['menstrual6']
             ])
 
+
+def no_weight_make_train_csv_for_day7(data_list ,file_path):
     with open(os.path.join(file_path, '7day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['7day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -8479,10 +8495,11 @@ def no_weight_make_train_csv(all_day_dic):
                 i['menstrual7'],
             ])
 
+
+def no_weight_make_train_csv_for_day8(data_list ,file_path):
     with open(os.path.join(file_path, '8day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['8day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -8642,10 +8659,10 @@ def no_weight_make_train_csv(all_day_dic):
                 i['menstrual8'],
             ])
 
+def no_weight_make_train_csv_for_day9(data_list ,file_path):
     with open(os.path.join(file_path, '9day_data.csv'), "w+", encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['9day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -8823,11 +8840,12 @@ def no_weight_make_train_csv(all_day_dic):
                 i['menstrual9'],
             ])
 
+
+def no_weight_make_train_csv_for_day10(data_list ,file_path):
     with open(os.path.join(file_path, '10day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['10day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -9025,11 +9043,11 @@ def no_weight_make_train_csv(all_day_dic):
             ])
 
 
+def no_weight_make_train_csv_for_day11(data_list ,file_path):
     with open(os.path.join(file_path, '11day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['11day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -9243,11 +9261,12 @@ def no_weight_make_train_csv(all_day_dic):
                 i['menstrual11'],
             ])
 
+
+def no_weight_make_train_csv_for_day12(data_list ,file_path):
     with open(os.path.join(file_path, '12day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['12day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -9480,11 +9499,11 @@ def no_weight_make_train_csv(all_day_dic):
             ])
 
 
+def no_weight_make_train_csv_for_day13(data_list ,file_path):
     with open(os.path.join(file_path, '13day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['13day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -9735,11 +9754,12 @@ def no_weight_make_train_csv(all_day_dic):
 
             ])
 
+
+def no_weight_make_train_csv_for_day14(data_list ,file_path):
     with open(os.path.join(file_path, '14day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['14day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -10008,11 +10028,12 @@ def no_weight_make_train_csv(all_day_dic):
 
             ])
 
+
+def no_weight_make_train_csv_for_day15(data_list ,file_path):
     with open(os.path.join(file_path, '15day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['15day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -10299,11 +10320,12 @@ def no_weight_make_train_csv(all_day_dic):
 
             ])
 
+
+def no_weight_make_train_csv_for_day16(data_list ,file_path):
     with open(os.path.join(file_path, '16day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['16day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -10608,11 +10630,12 @@ def no_weight_make_train_csv(all_day_dic):
 
             ])
 
+
+def no_weight_make_train_csv_for_day17(data_list ,file_path):
     with open(os.path.join(file_path, '17day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['17day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -10934,11 +10957,12 @@ def no_weight_make_train_csv(all_day_dic):
 
             ])
 
+
+def no_weight_make_train_csv_for_day18(data_list ,file_path):
     with open(os.path.join(file_path, '18day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['18day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -11279,11 +11303,12 @@ def no_weight_make_train_csv(all_day_dic):
 
             ])
 
+
+def no_weight_make_train_csv_for_day19(data_list ,file_path):
     with open(os.path.join(file_path, '19day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['19day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -11644,11 +11669,11 @@ def no_weight_make_train_csv(all_day_dic):
             ])
 
 
+def no_weight_make_train_csv_for_day20(data_list ,file_path):
     with open(os.path.join(file_path, '20day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['20day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -12025,11 +12050,12 @@ def no_weight_make_train_csv(all_day_dic):
 
             ])
 
+
+def no_weight_make_train_csv_for_day21(data_list ,file_path):
     with open(os.path.join(file_path, '21day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['21day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -12423,11 +12449,12 @@ def no_weight_make_train_csv(all_day_dic):
 
             ])
 
+
+def no_weight_make_train_csv_for_day22(data_list ,file_path):
     with open(os.path.join(file_path, '22day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['22day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -12840,11 +12867,12 @@ def no_weight_make_train_csv(all_day_dic):
 
             ])
 
+
+def no_weight_make_train_csv_for_day23(data_list ,file_path):
     with open(os.path.join(file_path, '23day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['23day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -13276,11 +13304,12 @@ def no_weight_make_train_csv(all_day_dic):
 
             ])
 
+
+def no_weight_make_train_csv_for_day24(data_list ,file_path):
     with open(os.path.join(file_path, '24day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['24day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -13729,11 +13758,12 @@ def no_weight_make_train_csv(all_day_dic):
 
             ])
 
+
+def no_weight_make_train_csv_for_day25(data_list ,file_path):
     with open(os.path.join(file_path, '25day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['25day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -14201,11 +14231,12 @@ def no_weight_make_train_csv(all_day_dic):
 
             ])
 
+
+def no_weight_make_train_csv_for_day26(data_list ,file_path):
     with open(os.path.join(file_path, '26day_data.csv'), "w+",
               encoding='utf8') as csvfile:
         writer = csv.writer(csvfile)
         # 先写入columns_name
-        data_list = all_day_dic['26day']
         writer.writerow([
             'label',
             'lastLabel1',
@@ -14692,16 +14723,146 @@ def no_weight_make_train_csv(all_day_dic):
 
 
 
+
+
+
 # 有体重 生成从1-26天的时间段的训练数据
 def make_every_day_train_data():
-    all_day_dic = get_all_day_dict()
-    make_train_csv(all_day_dic)
+
+    data_list = processData('./data/add_lastLabel1.csv')
+    file_path = './data/train_data_with_lastLabel'
+
+
+    for daylen in range(1,27):
+
+        person_label_list = get_day_list(data_list, daylen)
+
+        if daylen == 1:
+            make_train_csv_for_day1(person_label_list ,file_path)
+        elif daylen == 2:
+            make_train_csv_for_day2(person_label_list ,file_path)
+        elif daylen == 3:
+            make_train_csv_for_day3(person_label_list ,file_path)
+        elif daylen == 4:
+            make_train_csv_for_day4(person_label_list ,file_path)
+        elif daylen == 5:
+            make_train_csv_for_day5(person_label_list ,file_path)
+        elif daylen == 6:
+            make_train_csv_for_day6(person_label_list ,file_path)
+        elif daylen == 7:
+            make_train_csv_for_day7(person_label_list ,file_path)
+        elif daylen == 8:
+            make_train_csv_for_day8(person_label_list ,file_path)
+        elif daylen == 9:
+            make_train_csv_for_day9(person_label_list ,file_path)
+        elif daylen == 10:
+            make_train_csv_for_day10(person_label_list ,file_path)
+
+        elif daylen == 11:
+            make_train_csv_for_day11(person_label_list ,file_path)
+        elif daylen == 12:
+            make_train_csv_for_day12(person_label_list ,file_path)
+        elif daylen == 13:
+            make_train_csv_for_day13(person_label_list ,file_path)
+        elif daylen == 14:
+            make_train_csv_for_day14(person_label_list ,file_path)
+        elif daylen == 15:
+            make_train_csv_for_day15(person_label_list ,file_path)
+        elif daylen == 16:
+            make_train_csv_for_day16(person_label_list ,file_path)
+        elif daylen == 17:
+            make_train_csv_for_day17(person_label_list ,file_path)
+        elif daylen == 18:
+            make_train_csv_for_day18(person_label_list ,file_path)
+        elif daylen == 19:
+            make_train_csv_for_day19(person_label_list ,file_path)
+        elif daylen == 20:
+            make_train_csv_for_day20(person_label_list ,file_path)
+
+        elif daylen == 21:
+            make_train_csv_for_day21(person_label_list ,file_path)
+        elif daylen == 22:
+            make_train_csv_for_day22(person_label_list ,file_path)
+        elif daylen == 23:
+            make_train_csv_for_day23(person_label_list ,file_path)
+        elif daylen == 24:
+            make_train_csv_for_day24(person_label_list ,file_path)
+        elif daylen == 25:
+            make_train_csv_for_day25(person_label_list ,file_path)
+        else:
+            make_train_csv_for_day26(person_label_list ,file_path)
+
+    return
+
+
 
 
 # 无体重 生成从1-26天的时间段的训练数据
 def no_weight_make_every_day_train_data():
-    all_day_dic = no_weight_get_all_day_dict()
-    no_weight_make_train_csv(all_day_dic)
+
+    data_list = processData('./no_weight_data/add_lastLabel1.csv')
+    file_path = './no_weight_data/no_weight_train_data_with_lastLabel'
+
+    for daylen in range(1, 27):
+        person_label_list = no_weight_get_day_list(data_list, daylen)
+
+        if daylen == 1:
+            no_weight_make_train_csv_for_day1(person_label_list ,file_path)
+        elif daylen == 2:
+            no_weight_make_train_csv_for_day2(person_label_list ,file_path)
+        elif daylen == 3:
+            no_weight_make_train_csv_for_day3(person_label_list ,file_path)
+        elif daylen == 4:
+            no_weight_make_train_csv_for_day4(person_label_list ,file_path)
+        elif daylen == 5:
+            no_weight_make_train_csv_for_day5(person_label_list ,file_path)
+        elif daylen == 6:
+            no_weight_make_train_csv_for_day6(person_label_list ,file_path)
+        elif daylen == 7:
+            no_weight_make_train_csv_for_day7(person_label_list ,file_path)
+        elif daylen == 8:
+            no_weight_make_train_csv_for_day8(person_label_list ,file_path)
+        elif daylen == 9:
+            no_weight_make_train_csv_for_day9(person_label_list ,file_path)
+        elif daylen == 10:
+            no_weight_make_train_csv_for_day10(person_label_list ,file_path)
+
+        elif daylen == 11:
+            no_weight_make_train_csv_for_day11(person_label_list ,file_path)
+        elif daylen == 12:
+            no_weight_make_train_csv_for_day12(person_label_list ,file_path)
+        elif daylen == 13:
+            no_weight_make_train_csv_for_day13(person_label_list ,file_path)
+        elif daylen == 14:
+            no_weight_make_train_csv_for_day14(person_label_list ,file_path)
+        elif daylen == 15:
+            no_weight_make_train_csv_for_day15(person_label_list ,file_path)
+        elif daylen == 16:
+            no_weight_make_train_csv_for_day16(person_label_list ,file_path)
+        elif daylen == 17:
+            no_weight_make_train_csv_for_day17(person_label_list ,file_path)
+        elif daylen == 18:
+            no_weight_make_train_csv_for_day18(person_label_list ,file_path)
+        elif daylen == 19:
+            no_weight_make_train_csv_for_day19(person_label_list ,file_path)
+        elif daylen == 20:
+            no_weight_make_train_csv_for_day20(person_label_list ,file_path)
+
+        elif daylen == 21:
+            no_weight_make_train_csv_for_day21(person_label_list ,file_path)
+        elif daylen == 22:
+            no_weight_make_train_csv_for_day22(person_label_list ,file_path)
+        elif daylen == 23:
+            no_weight_make_train_csv_for_day23(person_label_list ,file_path)
+        elif daylen == 24:
+            no_weight_make_train_csv_for_day24(person_label_list ,file_path)
+        elif daylen == 25:
+            no_weight_make_train_csv_for_day25(person_label_list ,file_path)
+        else:
+            no_weight_make_train_csv_for_day26(person_label_list ,file_path)
+
+
+    return
 
 
 

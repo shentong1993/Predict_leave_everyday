@@ -2827,6 +2827,8 @@ def every_day_run_predict():
 
 
 
+
+
 if __name__ == '__main__':
     every_day_run_predict()
 

@@ -6,7 +6,7 @@
 2. 每天00:01点 ，运行 /every_day_run/get_data_and_predict.py 
   这个python 从当前减脂营在营的拉数据，预测跑不跑
 
-3.代码环境
+3. 代码环境
 # env: python3.7.0
 csv
 peewee
