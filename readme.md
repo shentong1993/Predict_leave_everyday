@@ -30,10 +30,13 @@ sklearn
   ./draw_data/ 中 draw1, draw2 ,draw3 
     是画柱状图分析算法效果
   
-  ./every_day_run/get_data_and_predict.py 
-    每日运行这个，从数据库拉取减脂营在营的学员，对昨天有动作的预测，其余统计
+  ./pull.py
+    每月00:01 运行这个制作数据集
+  
+  ./get_data_and_predict.py 
+    每日00:01运行这个，从数据库拉取减脂营在营的学员，对昨天有动作的预测，其余统计
     
-  ./every_day_run/every_day_result/ 
+  ./every_day_result/ 
     存放的是get_data_and_predict 生成的预测和统计结果
   
   ./logistic_predict/analysis_add_real1_predict0/ 

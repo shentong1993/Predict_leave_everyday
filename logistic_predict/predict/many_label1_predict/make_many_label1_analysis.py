@@ -339,7 +339,7 @@ def predict_leave(not_over_term_list):
                 feature_map.append('menstrual%d' % day)
 
             day = day_len
-            file_path = '../data/train_data_with_lastLabel/%dday_data.csv'%day
+            file_path = './data/train_data_with_lastLabel/%dday_data.csv'%day
             trainDatas, trainLabels = generate_data_and_label(file_path,day_len=day)
             total_train_Datas_List, total_train_Labels_List = generate_balance_data(trainDatas, trainLabels,day,num_of_label1_list=1000)
 

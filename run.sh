@@ -5,7 +5,6 @@ function pull(){
     python pull.py
 }
 function predict(){
-    cd every_day_run/
     python get_data_and_predict.py
 }
 if [ "$e" = "" ];then

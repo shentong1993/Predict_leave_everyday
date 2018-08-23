@@ -49,7 +49,5 @@ def start():
     print('数据集制作 完毕')
 
 
-
 if __name__ == '__main__':
-
     start()
