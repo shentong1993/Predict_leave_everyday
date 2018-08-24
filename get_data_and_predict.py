@@ -2369,6 +2369,43 @@ group by apply_Id
     return trainDatas
 
 
+# 获取管理师名字
+def get_instructor_name():
+    trainDatas = []
+
+    if camp_db.is_closed():
+        camp_db.connect()
+
+    record = RawModel.raw('''
+    select
+  apply.APPLY_ID apply_Id,
+  apply.CAMP_ID camp_id,
+  instructor.NAME          instructor_name
+from TB_APPLY_RECORD apply
+inner join TB_CAMP camp on apply.CAMP_ID = camp.CAMP_ID
+inner join TB_INSTRUCTOR instructor on camp.INSTRUCTOR_ID = instructor.INSTRUCTOR_ID
+LEFT JOIN TB_TERM term ON term.TERM_ID = apply.TERM_ID
+WHERE date_add(term.CAMP_START_TIME, INTERVAL term.DAYS DAY) > now()
+      and term.CAMP_START_TIME < now()
+      and datediff(now(),term.CAMP_START_TIME ) > 0
+      and term.TYPE = 1
+
+    ''')
+
+
+    for r in record:
+        r_dic ={}
+        r_dic['apply_Id'] = r.apply_Id
+        r_dic['instructor_name']= r.instructor_name
+
+        trainDatas.append(r_dic)
+
+
+    if not camp_db.is_closed():
+        camp_db.close()
+
+    return trainDatas
+
 
 #用applyID 将打卡信息 ,说话信息 填充进 not_over_term_list(装体重的数据结构)
 def get_all_data(not_over_term_list , cl ,sl ):
@@ -2405,6 +2442,23 @@ def get_all_data(not_over_term_list , cl ,sl ):
                         person['greed%d' % i] = person3['greed%d' % i]
                         person['pressure%d' % i] = person3['pressure%d' % i]
                         person['menstrual%d' % i] = person3['menstrual%d' % i]
+                    break
+
+    return not_over_term_list
+
+
+# 添加管理师的名字
+def add_instructor_name(not_over_term_list , il):
+    for term_num_dic in not_over_term_list:
+        for person in term_num_dic['predict_data']:
+            person['instructor_name'] = ''
+
+        for person in term_num_dic['predict_data']:
+            apply_Id = person['apply_Id']
+
+            for person2 in il:
+                if person2['apply_Id'] == apply_Id:
+                    person['instructor_name'] = person2['instructor_name']
                     break
 
     return not_over_term_list
@@ -2464,7 +2518,7 @@ def make_xls_file_with_all_message(predict0_list, file_type):
     file = Workbook(encoding='utf-8')
     table = file.add_sheet('data')
 
-    data_list = [['学期','姓名','手机','开营时间','要跑的日期','用1-n天数据预测','待的时间']]
+    data_list = [['学期','姓名','手机','管理师','开营时间','要跑的日期','用1-n天数据预测','待的时间']]
 
     for day in range(1, 27):
         data_list[0].append('第%d天体重' % day)
@@ -2504,7 +2558,7 @@ def no_weight_make_xls_file_with_all_message(no_weight_predict0_list):
     file = Workbook(encoding='utf-8')
     table = file.add_sheet('data2')
 
-    data_list = [['学期','姓名','手机','开营时间','要跑的日期','用1-n天数据预测','待的时间']]
+    data_list = [['学期','姓名','手机','管理师','开营时间','要跑的日期','用1-n天数据预测','待的时间']]
 
     for day in range(1, 27):
         data_list[0].append('第%d天早餐' % day)
@@ -2633,6 +2687,7 @@ def cut_already_leave_person_before_predict(not_over_term_list):
                 person_dic['term'] = person['term_num']
                 person_dic['name'] = person['name']
                 person_dic['phone'] = person['phone']
+                person_dic['instructor_name'] = person['instructor_name']
                 person_dic['camp_start_time'] = term_num_dic['camp_start_time']
                 person_dic['day'] = term_num_dic['predict_day']
                 person_dic['stay_day'] = person_real_stay_time
@@ -2693,6 +2748,7 @@ def no_weight_cut_already_leave_person_before_predict(no_weight_not_over_term_li
                 person_dic['term'] = person['term_num']
                 person_dic['name'] = person['name']
                 person_dic['phone'] = person['phone']
+                person_dic['instructor_name'] = person['instructor_name']
                 person_dic['camp_start_time'] = term_num_dic['camp_start_time']
                 person_dic['day'] = term_num_dic['predict_day']
                 person_dic['stay_day'] = person_real_stay_time
@@ -2767,9 +2823,17 @@ def every_day_run_predict():
 
     day_speak_list = get_day_speak()
 
+    instructor_list = get_instructor_name()
+
     #[{'termID': 261, 'term_num': 114, 'predict_day': 22 , 'predict_data':[{'apply_Id':_ , 'term_num':_ ,}...]}, ,,]
     not_over_term_list = get_all_data(not_over_term_list,day_check_list , day_speak_list)
     no_weight_not_over_term_list = get_all_data(no_weight_not_over_term_list, day_check_list , day_speak_list)
+
+    not_over_term_list = add_instructor_name(not_over_term_list, instructor_list)
+    no_weight_not_over_term_list = add_instructor_name(no_weight_not_over_term_list, instructor_list)
+
+
+
 
     not_over_term_list = add_null_weight(not_over_term_list)
     # print(not_over_term_list[0]['predict_data'][0])

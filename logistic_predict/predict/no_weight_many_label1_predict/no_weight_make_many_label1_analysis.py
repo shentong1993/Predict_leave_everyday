@@ -428,6 +428,7 @@ def no_weight_predict_leave(no_weight_not_over_term_list):
                     predict_dic['term'] = person['term_num']
                     predict_dic['name'] = person['name']
                     predict_dic['phone'] = person['phone']
+                    predict_dic['instructor_name'] = person['instructor_name']
                     predict_dic['camp_start_time'] = term_num_dic['camp_start_time']
                     predict_dic['day'] = term_num_dic['predict_day']
                     predict_dic['stay_day'] = term_num_dic['predict_day']

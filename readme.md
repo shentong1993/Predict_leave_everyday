@@ -78,7 +78,9 @@ csv peewee database xlwt numpy sklearn
   
     
 
-   
+$ sudo docker login --username=rjfittime registry.cn-beijing.aliyuncs.com
+$ sudo docker tag [ImageId] registry.cn-beijing.aliyuncs.com/fittime/predict_leave_everyday:[镜像版本号]
+$ sudo docker push registry.cn-beijing.aliyuncs.com/fittime/predict_leave_everyday:[镜像版本号]
   
 
 
