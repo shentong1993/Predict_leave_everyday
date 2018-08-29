@@ -94,8 +94,8 @@ def verify_if_predict_right_in_tommorrow(predic_file , real_file):
 if __name__ == '__main__':
 
     #/Users/shen/PycharmProjects/analysis_predict_leave_result/result_data/
-    predic_file = '8月24日 预测要跑.xls'
-    real_file = '8月25日 已经跑了.xls'
+    predic_file = '8月28日 today_run.xls'
+    real_file = '8月29日 already_run.xls'
 
     verify_if_predict_right_in_tommorrow(predic_file , real_file)
 
