@@ -16,7 +16,6 @@ class RawModel(EshopBaseModel):
     rawID = IntegerField()
 
 
-
 # 提取减脂营没有结营的所有营
 def get_not_over_TermID():
     #[{'termID': 261, 'term_num': 114,'camp_start_time':___ , 'predict_day': 22 }, ,,]
@@ -371,7 +370,7 @@ def get_day_all_applyID(not_over_term_list):
   apply.MOBILE                                   mobile,
   apply.AGE age,
   apply.GENDER gender
-
+  
 from TB_APPLY_RECORD apply
   LEFT JOIN TB_TERM term ON term.TERM_ID = apply.TERM_ID
   LEFT JOIN TB_ORDER tborder ON apply.PACKAGE_ORDER_ID = tborder.ORDER_ID
@@ -2545,9 +2544,9 @@ def make_xls_file_with_all_message(predict0_list, file_type):
             table.write(i, j, q)
 
     if file_type == 'predict':
-        file.save('./data/every_day_result/预测要跑.xls')
+        file.save('./data/every_day_result/today_run.xls')
     elif file_type == 'already_leave':
-        file.save('./data/every_day_result/已经跑了.xls')
+        file.save('./data/every_day_result/already_run.xls')
 
     return
 
@@ -2582,7 +2581,7 @@ def no_weight_make_xls_file_with_all_message(no_weight_predict0_list):
     for i, p in enumerate(data_list):
         for j, q in enumerate(p):
             table.write(i, j, q)
-    file.save('./data/every_day_result/无体重名单.xls')
+    file.save('./data/every_day_result/no_weight_run.xls')
 
     return
 
@@ -2848,7 +2847,9 @@ def every_day_run_predict():
     # predict0_list =[{'term_num':_ , 'name':_}, ,,]
     print('开始预测有体重')
     # 1000个逻辑回归预测
+    # print(not_over_term_list)
     predict0_list = predict_leave(not_over_term_list)
+    # print(predict0_list)
     make_xls_file_with_all_message(predict0_list, file_type = 'predict')
     make_xls_file_with_all_message(already_leave_list, file_type = 'already_leave')
     print('有体重 预测完毕')

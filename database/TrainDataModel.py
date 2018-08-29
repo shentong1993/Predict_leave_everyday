@@ -3292,5 +3292,7 @@ def sql_get_data():
     get_all_no_weight_data(al=apply_list, cl=check_list, sl=speak_list)
     print('开局无体重提取完毕')
 
+    return
+
 
 
