@@ -1,7 +1,7 @@
 import os
 from playhouse.migrate import *
 
-camp_db = MySQLDatabase(host='172.31.100.148', port=3306, user='onlineuser', database='eshop',passwd='ndSMwY085_8',charset='utf8')
+camp_db = MySQLDatabase(host='x.x.x.x', port=x, user='x', database='x',passwd='x',charset='utf8')
 
 
 class EshopBaseModel(Model):
